@@ -2,7 +2,7 @@
   "name": "wbs-project-blog",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://GannaKov.github.io/wbs-project-blog",
+  "homepage": "https://GannaKov.github.io/wbs-project-blog/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /wbs-project-blog/"
