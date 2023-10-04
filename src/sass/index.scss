@@ -1,4 +1,12 @@
+@import './base/reset';
 @import './common';
 @import './utils/mixins';
 @import './base/body';
-@import './base/reset';
+
+// @import './components/grid-test';
+@import './components/wrapper';
+@import './layout/header';
+@import './layout/hero';
+@import './layout/aside';
+@import './layout/content';
+@import './layout/footer';

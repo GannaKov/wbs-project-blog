@@ -1,0 +1,17 @@
+.wrapper {
+  max-width: 940px;
+  padding: 0 2rem 2rem;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 10px;
+  & > * {
+    background-color: #eae8e8;
+    color: rgb(28, 28, 28);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+  }
+  @include desktop {
+    grid-template-columns: 1fr 3fr;
+  }
+}
