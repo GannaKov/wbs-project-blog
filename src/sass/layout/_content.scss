@@ -1,0 +1,5 @@
+.content {
+  @include desktop {
+    grid-row: 3/5;
+  }
+}
