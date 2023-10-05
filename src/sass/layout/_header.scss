@@ -16,3 +16,13 @@
     color: green;
   }
 }
+.header-nav {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.header-nav__list {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
