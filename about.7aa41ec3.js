@@ -1,2 +1,0 @@
-!function(){"use strict";document.addEventListener("DOMContentLoaded",(function(){var t=window.location.pathname.split("/").pop(),e=document.querySelectorAll(".header-nav__link");e.forEach((function(e){e.getAttribute("href").split("/").pop()===t&&e.classList.add("current-link")})),e.forEach((function(e){e.addEventListener("click",(function(n){e.getAttribute("href").split("/").pop()===t&&(e.classList.add("current-link"),n.preventDefault())}))}))}))}();
-//# sourceMappingURL=about.7aa41ec3.js.map
