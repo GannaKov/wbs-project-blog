@@ -2,6 +2,7 @@
 if (window.location.pathname.endsWith('/')) {
   window.location.href = 'index.html';
 }
+console.log(window.location.href);
 document.addEventListener('DOMContentLoaded', function () {
   const currentPage = window.location.pathname.split('/').pop();
   const links = document.querySelectorAll('.header-nav__link');
