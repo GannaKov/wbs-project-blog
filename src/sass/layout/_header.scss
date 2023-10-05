@@ -15,14 +15,16 @@
   & .current-link {
     color: green;
   }
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .header-nav {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
-.header-nav__list {
-  @include tablet {
-    display: flex;
-    justify-content: space-between;
-  }
+.header-nav__link:focus,
+.header-nav__link:hover {
+  color: green;
 }
