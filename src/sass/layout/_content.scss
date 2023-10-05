@@ -3,3 +3,48 @@
     grid-row: 3/5;
   }
 }
+
+.content-list__item {
+  display: flex;
+  flex-direction: column;
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}
+
+.article__wrapper {
+  margin-bottom: 1rem;
+}
+.article__title {
+  margin-bottom: 1rem;
+}
+.article__date {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: rgba(225, 16, 131, 0.9);
+}
+// .article__text {
+// }
+.content-list__btn {
+  margin-bottom: 2rem;
+  margin-left: auto;
+  font-size: 1.3rem;
+  color: rgb(225, 16, 131);
+  border: none;
+  background-color: transparent;
+}
+.content-list__comments {
+  font-size: 1.3rem;
+}
+
+.comments-quantity {
+  font-size: 1.5rem;
+  border-bottom: 1px dashed; /* Тут можно настроить толщину и цвет линии */
+  display: inline; /* Чтобы линия была только под текстом */
+  text-decoration: none; /* Убираем стандартное подчеркивание */
+}
+.text-dashed {
+  border-bottom: 1px dashed; /* Тут можно настроить толщину и цвет линии */
+  display: inline; /* Чтобы линия была только под текстом */
+  text-decoration: none; /* Убираем стандартное подчеркивание */
+}
