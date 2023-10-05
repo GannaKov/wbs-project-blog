@@ -1,8 +1,10 @@
 'use strict';
-if (window.location.pathname.endsWith('/')) {
-  window.location.href = 'index.html';
+if (
+  window.location.pathname === '/' ||
+  window.location.pathname === '/wbs-project-blog/'
+) {
+  window.location.href = '/wbs-project-blog/index.html';
 }
-console.log(window.location.href);
 document.addEventListener('DOMContentLoaded', function () {
   const currentPage = window.location.pathname.split('/').pop();
   const links = document.querySelectorAll('.header-nav__link');
