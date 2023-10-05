@@ -1,4 +1,7 @@
 'use strict';
+if (window.location.pathname.endsWith('/')) {
+  window.location.href = 'index.html';
+}
 document.addEventListener('DOMContentLoaded', function () {
   const currentPage = window.location.pathname.split('/').pop();
   const links = document.querySelectorAll('.header-nav__link');
