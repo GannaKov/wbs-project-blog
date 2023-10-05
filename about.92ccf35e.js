@@ -1,2 +1,0 @@
-window.location.pathname.endsWith("/")&&(window.location.href="index.html"),console.log(window.location.href),document.addEventListener("DOMContentLoaded",(function(){const t=window.location.pathname.split("/").pop(),e=document.querySelectorAll(".header-nav__link");e.forEach((e=>{e.getAttribute("href").split("/").pop()===t&&e.classList.add("current-link")})),e.forEach((e=>{e.addEventListener("click",(function(n){e.getAttribute("href").split("/").pop()===t&&(e.classList.add("current-link"),n.preventDefault())}))}))}));
-//# sourceMappingURL=about.92ccf35e.js.map
