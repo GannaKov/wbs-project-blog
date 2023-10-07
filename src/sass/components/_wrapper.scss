@@ -11,6 +11,11 @@
     padding: 2rem 1.5rem;
     font-size: 1.5rem;
   }
+}
+.wrapper--aboutme {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.wrapper--mainpage {
   @include desktop {
     grid-template-columns: 3fr 1fr;
   }

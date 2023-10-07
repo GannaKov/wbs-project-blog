@@ -50,8 +50,13 @@ body {
   padding: 2rem 1.5rem;
   font-size: 1.5rem;
 }
+
+.wrapper--aboutme {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 @media screen and (min-width: 1200px) {
-  .wrapper {
+  .wrapper--mainpage {
     grid-template-columns: 3fr 1fr;
   }
 }
