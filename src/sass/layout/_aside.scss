@@ -1,6 +1,7 @@
 .sidebar {
+  padding: 2rem 1.5rem;
   @include desktop {
     grid-column: 2/3;
-    grid-row: 3/5;
+    grid-row: 3/4;
   }
 }

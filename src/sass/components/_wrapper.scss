@@ -5,10 +5,10 @@
   display: grid;
   grid-gap: 10px;
   & > * {
-    background-color: rgba(240, 239, 239, 0.881);
+    // background-color: rgba(240, 239, 239, 0.881);
     color: rgb(28, 28, 28);
     border-radius: 5px;
-    padding: 2rem 1.5rem;
+    // padding: 2rem 1.5rem;
     font-size: 1.5rem;
   }
 }

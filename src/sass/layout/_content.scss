@@ -1,6 +1,12 @@
 .content {
+  padding: 2rem 1.5rem;
+  // background-color: rgba(240, 239, 239, 0.881);
+  border: 1px solid rgb(221, 218, 218);
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   @include desktop {
-    grid-row: 3/5;
+    grid-row: 3/4;
   }
 }
 
@@ -77,4 +83,6 @@
   float: left;
   width: 300px;
   margin-right: 1.3rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
