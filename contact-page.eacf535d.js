@@ -1,2 +1,2 @@
 !function(){"use strict";"/"!==window.location.pathname&&"/wbs-project-blog/"!==window.location.pathname||(window.location.href="/wbs-project-blog/index.html"),document.addEventListener("DOMContentLoaded",(function(){var t=window.location.pathname.split("/").pop(),n=document.querySelectorAll(".header-nav__link");n.forEach((function(n){n.getAttribute("href").split("/").pop()===t&&n.classList.add("current-link")})),n.forEach((function(n){n.addEventListener("click",(function(e){n.getAttribute("href").split("/").pop()===t&&(n.classList.add("current-link"),e.preventDefault())}))}))}))}();
-//# sourceMappingURL=contact.c1770749.js.map
+//# sourceMappingURL=contact-page.eacf535d.js.map
