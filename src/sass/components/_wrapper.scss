@@ -1,6 +1,6 @@
 .wrapper {
   max-width: 1200px;
-  padding: 0 2rem 2rem;
+  padding: 0 1rem 2rem;
   margin: 0 auto;
   display: grid;
   grid-gap: 10px;
@@ -10,6 +10,10 @@
     border-radius: 5px;
     // padding: 2rem 1.5rem;
     font-size: 1.5rem;
+  }
+  @include tablet {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 // .wrapper--aboutme {
