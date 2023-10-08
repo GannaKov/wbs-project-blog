@@ -57,7 +57,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .wrapper--mainpage {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3.5fr 1.5fr;
   }
 }
 
@@ -123,6 +123,10 @@ body {
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: 1px solid green;
   padding: 2rem 1.5rem;
 }
 @media screen and (min-width: 1200px) {
@@ -130,6 +134,13 @@ body {
     grid-column: 2/3;
     grid-row: 3/4;
   }
+}
+
+.dropdown-select {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  -webkit-appearance: none;
 }
 
 .content {

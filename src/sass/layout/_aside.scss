@@ -1,7 +1,17 @@
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: 1px solid green;
   padding: 2rem 1.5rem;
   @include desktop {
     grid-column: 2/3;
     grid-row: 3/4;
   }
+}
+.dropdown-select {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  -webkit-appearance: none;
 }
