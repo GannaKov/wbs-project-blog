@@ -2,11 +2,15 @@
   <p class="contact-title">Contact us</p>
   <form class="contact-form">
     <div class="contact-form__row">
-      <label class="contact-form__label" for="name">Name</label>
+      <label class="contact-form__label" for="name"
+        >&#8432;&nbsp;&nbsp;Name</label
+      >
       <input class="contact-form__input" id="name" name="name" type="text" />
     </div>
     <div class="contact-form__row row-email">
-      <label class="contact-form__label" for="email">Email</label>
+      <label class="contact-form__label" for="email"
+        >&#8432;&nbsp;&nbsp;Email</label
+      >
       <input
         class="contact-form__input"
         id="email"
@@ -15,10 +19,14 @@
         placeholder="joe@example.com"
       />
     </div>
-    <div class="contact-form__row">
-      <!-- <label for="abstract">Abstract</label> -->
-      <textarea id="abstract" name="abstract"></textarea>
-    </div>
+
+    <textarea
+      class="contact-form__text-area"
+      id="message"
+      name="message"
+      placeholder="Enter your message here..."
+    ></textarea>
+
     <button class="contact-form__btn">Submit</button>
   </form>
 </main>

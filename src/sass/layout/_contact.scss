@@ -32,25 +32,56 @@
   &:not(:last-of-type) {
     margin-bottom: 2rem;
   }
-  &.row-email {
-    margin-bottom: 4rem;
-  }
+  //   &.row-email {
+  //     margin-bottom: 4rem;
+  //   }
   &:last-of-type {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 }
 .contact-form__label {
   margin-bottom: 1rem;
 }
 .contact-form__input {
-  background-color: #ffffff;
-  border: 1px solid #d6d9dc;
+  height: 46px;
+  outline: transparent;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(179, 178, 178);
   border-radius: 3px;
+  padding: 1rem;
+  &:hover,
+  &:focus {
+    border-color: rgb(105, 105, 107);
+  }
 }
 .contact-form__text-area {
   display: flex;
   width: 100%;
+  outline: transparent;
+  border: 1px solid rgb(179, 178, 178);
+  border-radius: 3px;
+  margin-bottom: 3rem;
+  min-height: 200px;
+  //   font-size: 1.3rem;
+  padding: 1rem;
+  resize: none;
+  &:hover,
+  &:focus {
+    border-color: rgb(105, 105, 107);
+  }
 }
 .contact-form__btn {
+  width: 120px;
+  height: 46px;
+  outline: transparent;
+  border-color: transparent;
   margin-left: auto;
+  border-radius: 3px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 128, 0, 0.802);
+  color: rgba(255, 255, 255, 1);
+  &:focus,
+  &:hover {
+    background-color: rgb(0, 128, 0);
+  }
 }
