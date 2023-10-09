@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //-------------------------
 $('#country').selectmenu().selectmenu('menuWidget').addClass('overflow');
 $('.dpd-select').selectmenu({
-  width: 250,
+  width: 240,
 });
 //--------------------
 //-----------------

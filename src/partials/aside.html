@@ -1,14 +1,33 @@
 <aside class="sidebar">
+  <form class="sidebar-search">
+    <input class="sidebar-search__input" type="text" placeholder="Search..." />
+    <button class="sidebar-search__btn" type="submit">
+      <svg class="sidebar-search__icon" width="20" height="20">
+        <use href="./images/icons.svg#icon-search"></use>
+      </svg>
+    </button>
+  </form>
   <label class="dpd-label" for="country">Select country:</label>
   <select class="dpd-select" name="country" id="country">
     <!-- <option value="2" selected>2</option> -->
   </select>
-  <p>Topics</p>
-  <ul>
-    <li>Advices</li>
-    <li>Reviews</li>
-    <li>Travel news</li>
-    <li>Tips</li>
-    <li></li>
-  </ul>
+  <p class="topics">Topics</p>
+
+  <ol class="topics-list">
+    <li class="topics-list__item">
+      <a class="topics-list__link" href="">Advices</a>
+    </li>
+    <li class="topics-list__item">
+      <a class="topics-list__link" href="">Reviews</a>
+    </li>
+    <li class="topics-list__item">
+      <a class="topics-list__link" href="">Travel news</a>
+    </li>
+    <li class="topics-list__item">
+      <a class="topics-list__link" href="">Tips</a>
+    </li>
+    <li class="topics-list__item">
+      <a class="topics-list__link" href="">Useful info</a>
+    </li>
+  </ol>
 </aside>
