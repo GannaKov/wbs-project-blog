@@ -49,7 +49,7 @@ $('.dpd-select').selectmenu({
 // });
 //---------------
 const dpd = document.querySelector('.dpd-select');
-const items = [
+const countries = [
   'Italy',
   'Germany',
   'Egypt',
@@ -65,14 +65,14 @@ const items = [
   'Sweden',
   'Austria',
 ];
-
+const sortedCountries = [...countries].sort((a, b) => a.localeCompare(b));
 function renderMenu(el, arr) {
   const murkup = arr
     .map(item => `<option value=${item}>${item} </option>`)
     .join('');
   el.insertAdjacentHTML('beforeend', murkup);
 }
-renderMenu(dpd, items);
+renderMenu(dpd, sortedCountries);
 //---
 const dpdButton = document.querySelector('.ui-selectmenu-text');
 dpdButton.textContent = 'Choose the country';
