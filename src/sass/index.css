@@ -326,6 +326,7 @@ body {
 @media screen and (min-width: 1200px) {
   .footer {
     grid-column: 1/-1;
+    grid-row: 4/5;
     /* needed for the floated layout */
   }
 }
@@ -593,4 +594,17 @@ body {
 }
 .contact-form__btn:focus, .contact-form__btn:hover {
   background-color: rgb(0, 128, 0);
+}
+
+.goBack-btn {
+  background-color: white;
+  outline: none;
+  border: 1px solid green;
+  border-radius: 5px;
+  width: 165px;
+  height: 40px;
+}
+
+.goBack-link {
+  color: rgb(225, 16, 131);
 }/*# sourceMappingURL=index.css.map */
