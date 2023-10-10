@@ -95,6 +95,8 @@ body {
 }
 
 .header-nav__link {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   color: black;
 }
 .header-nav__link:focus, .header-nav__link:hover {
@@ -199,6 +201,14 @@ body {
 
 .ui-menu .ui-menu-item {
   font-size: 1.1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 1200px) {
+  .ui-menu .ui-menu-item {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
 }
 
 .ui-button:hover,
@@ -221,7 +231,7 @@ body {
 .topics-list {
   padding-right: 2rem;
   padding-left: 2rem;
-  height: 30px;
+  height: 44px;
   overflow: auto;
   border: 1px solid rgb(173, 171, 171);
   border-radius: 5px;
@@ -254,6 +264,16 @@ body {
   }
 }
 
+.topics-list__item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 1200px) {
+  .topics-list__item {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+}
 .topics-list__item:hover, .topics-list__item.focus {
   color: green;
 }
@@ -457,6 +477,7 @@ body {
 }
 
 .footer-form__btn {
+  color: black;
   height: 46px;
   font-variant: small-caps;
   border-radius: 4px;
