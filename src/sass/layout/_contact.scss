@@ -29,6 +29,9 @@
 
   width: 100%;
   padding: 8px;
+  &:focus-within {
+    border: 1px dashed rgba(0, 128, 0, 0.687);
+  }
   @include tablet {
     padding: 50px;
     width: 80%;
@@ -60,7 +63,7 @@
   padding: 1rem;
   &:hover,
   &:focus {
-    border-color: rgb(105, 105, 107);
+    border-color: rgba(0, 128, 0, 0.687);
   }
 }
 .contact-form__text-area {
@@ -76,7 +79,7 @@
   resize: none;
   &:hover,
   &:focus {
-    border-color: rgb(105, 105, 107);
+    border-color: rgba(0, 128, 0, 0.687);
   }
 }
 .contact-form__btn {
