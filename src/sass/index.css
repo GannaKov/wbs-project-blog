@@ -180,19 +180,25 @@ body {
 }
 
 .overflow {
-  height: 200px;
+  height: 110px;
+}
+@media screen and (min-width: 1200px) {
+  .overflow {
+    height: 200px;
+  }
 }
 
 .ui-selectmenu-button {
   background: rgb(255, 255, 255);
-  height: 50px;
+  height: 44px;
   padding-left: 0.5rem;
   border-radius: 5px;
   margin-bottom: 2rem;
+  font-size: 1.1rem;
 }
 
-.ui-selectmenu-text {
-  font-size: 1.2rem;
+.ui-menu .ui-menu-item {
+  font-size: 1.1rem;
 }
 
 .ui-button:hover,
@@ -213,7 +219,39 @@ body {
 }
 
 .topics-list {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  height: 30px;
+  overflow: auto;
+  border: 1px solid rgb(173, 171, 171);
+  border-radius: 5px;
   list-style-type: disc;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1);
+  /* Стилизация скроллбара для браузеров на основе Chromium (Chrome, Edge) */
+}
+.topics-list li::marker {
+  content: "●"; /* Изменяем маркер на круг (●) */
+  color: rgba(0, 0, 0, 0.852); /* Меняем цвет кружочка */
+  vertical-align: middle;
+  font-size: 1rem;
+}
+.topics-list::-webkit-scrollbar {
+  width: 10px; /* Ширина скроллбара */
+}
+.topics-list::-webkit-scrollbar-thumb {
+  background: rgba(214, 213, 213, 0.841); /* Цвет бара прокрутки */
+  border-radius: 2px; /* Скругление углов бара */
+  border: 1px solid rgba(0, 0, 0, 0.63);
+}
+@media screen and (min-width: 1200px) {
+  .topics-list {
+    height: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    border: none;
+    overflow: visible;
+  }
 }
 
 .topics-list__item:hover, .topics-list__item.focus {
@@ -221,6 +259,7 @@ body {
 }
 
 .topics-list__link {
+  margin-left: 1rem;
   color: rgb(225, 16, 131);
 }
 .topics-list__link:hover, .topics-list__link.focus {
