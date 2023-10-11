@@ -120,6 +120,9 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   color: black;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
 }
 .header-nav__link:focus, .header-nav__link:hover {
   color: green;
@@ -178,10 +181,13 @@ body {
   padding-left: 0.5rem;
   border: 1px solid rgb(211, 211, 211);
   border-radius: 5px;
+  background: white;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sidebar-search__input:hover, .sidebar-search__input:focus {
   border-color: green;
-  background: white;
 }
 
 .sidebar-search__btn {
@@ -233,14 +239,17 @@ body {
   }
 }
 
-.ui-button:hover,
-.ui-button:focus {
+.ui-button:hover, .ui-button:focus {
+  transition-property: border-color, background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-color: green;
   background: white;
 }
 
-.ui-menu-item-wrapper:hover,
-.ui-menu-item:focus {
+.ui-menu-item-wrapper:hover:hover, .ui-menu-item-wrapper:hover:focus,
+.ui-menu-item-wrapper:focus:hover,
+.ui-menu-item-wrapper:focus:focus {
   background: rgba(0, 128, 0, 0.8);
   color: white;
 }
@@ -296,13 +305,13 @@ body {
     padding-bottom: 0.2rem;
   }
 }
-.topics-list__item:hover, .topics-list__item.focus {
-  color: green;
-}
 
 .topics-list__link {
   margin-left: 1rem;
   color: rgb(225, 16, 131);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .topics-list__link:hover, .topics-list__link.focus {
   color: green;
@@ -342,9 +351,12 @@ body {
   margin-right: 1rem;
   font-size: 1.3rem;
   cursor: pointer;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .content-list__link:hover, .content-list__link:focus {
-  color: rgb(243, 6, 137);
+  color: green;
   text-decoration: underline;
 }
 
@@ -463,6 +475,9 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   color: rgb(255, 255, 255);
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-list__link:hover, .soc-list__link:focus {
   background-color: rgb(0, 128, 0);
@@ -507,6 +522,9 @@ body {
   outline: transparent;
   border-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form__btn:focus, .footer-form__btn:hover {
   background-color: rgb(0, 128, 0);
@@ -643,6 +661,9 @@ body {
   border: 1px solid rgb(179, 178, 178);
   border-radius: 3px;
   padding: 1rem;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form__input:hover, .contact-form__input:focus {
   border-color: rgba(0, 128, 0, 0.687);
@@ -658,6 +679,9 @@ body {
   min-height: 200px;
   padding: 1rem;
   resize: none;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form__text-area:hover, .contact-form__text-area:focus {
   border-color: rgba(0, 128, 0, 0.687);
@@ -673,6 +697,9 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: rgba(0, 128, 0, 0.802);
   color: rgb(255, 255, 255);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form__btn:focus, .contact-form__btn:hover {
   background-color: rgb(0, 128, 0);
@@ -686,6 +713,9 @@ body {
   width: 165px;
   height: 40px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .goBack-btn:focus, .goBack-btn:hover {
   border-color: rgb(151, 147, 147);
@@ -701,6 +731,9 @@ body {
   align-items: center;
   justify-content: center;
   color: rgb(225, 16, 131);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .goBack-link:hover, .goBack-link:focus {
   color: green;

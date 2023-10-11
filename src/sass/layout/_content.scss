@@ -32,9 +32,10 @@
   margin-right: 1rem;
   font-size: 1.3rem;
   cursor: pointer;
+  @include transitions(color);
   &:hover,
   &:focus {
-    color: rgb(243, 6, 137);
+    color: green;
     text-decoration: underline;
   }
 }

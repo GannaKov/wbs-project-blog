@@ -17,9 +17,18 @@
   transition-property: $tr-property;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  // transition-delay: 2500ms;
 }
 // exp @include desktop {padding:20px;
 //   &-title {
 //     margin-bottom: 50px;
 //   }
 // }
+// exp  @include transitions(color, background-color, box-shadow);
+//   &:hover,
+//   &:focus {
+//     color: var(--btn-text);
+//     background-color: var(--btn-background);
+//     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+//       0 3px 1px 0 rgba(0, 0, 0, 0.1);
+//   }

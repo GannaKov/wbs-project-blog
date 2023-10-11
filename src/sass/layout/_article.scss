@@ -10,6 +10,7 @@
   width: 165px;
   height: 40px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  @include transitions(border-color);
   &:focus,
   &:hover {
     border-color: rgb(151, 147, 147);
@@ -24,6 +25,7 @@
   align-items: center;
   justify-content: center;
   color: rgb(225, 16, 131);
+  @include transitions(color);
   &:hover,
   &:focus {
     color: green;
@@ -70,6 +72,7 @@
   align-items: center;
   justify-content: center;
   color: rgb(225, 16, 131);
+
   &:hover,
   &:focus {
     text-decoration: underline;

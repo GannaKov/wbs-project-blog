@@ -61,6 +61,7 @@
   border: 1px solid rgb(179, 178, 178);
   border-radius: 3px;
   padding: 1rem;
+  @include transitions(border-color);
   &:hover,
   &:focus {
     border-color: rgba(0, 128, 0, 0.687);
@@ -77,6 +78,7 @@
   //   font-size: 1.3rem;
   padding: 1rem;
   resize: none;
+  @include transitions(border-color);
   &:hover,
   &:focus {
     border-color: rgba(0, 128, 0, 0.687);
@@ -92,6 +94,7 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: rgba(0, 128, 0, 0.802);
   color: rgba(255, 255, 255, 1);
+  @include transitions(background-color);
   &:focus,
   &:hover {
     background-color: rgb(0, 128, 0);

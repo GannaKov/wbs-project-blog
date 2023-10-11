@@ -51,6 +51,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 1);
   border-radius: 50%;
+  @include transitions(background-color);
   &:hover,
   &:focus {
     background-color: rgb(0, 128, 0);
@@ -94,6 +95,7 @@
   outline: transparent;
   border-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @include transitions(color, background-color);
   &:focus,
   &:hover {
     background-color: rgb(0, 128, 0);

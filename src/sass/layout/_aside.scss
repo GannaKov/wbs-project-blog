@@ -29,10 +29,11 @@
   padding-left: 0.5rem;
   border: 1px solid rgb(211, 211, 211);
   border-radius: 5px;
+  background: white;
+  @include transitions(border-color);
   &:hover,
   &:focus {
     border-color: green;
-    background: white;
   }
 }
 .sidebar-search__btn {
@@ -86,17 +87,25 @@
     padding-bottom: 0.2rem;
   }
 }
-
-// }
-.ui-button:hover,
-.ui-button:focus {
-  border-color: green;
-  background: white;
+.ui-button {
+  &:hover,
+  &:focus {
+    @include transitions(border-color, background);
+    border-color: green;
+    background: white;
+  }
 }
+
 .ui-menu-item-wrapper:hover,
-.ui-menu-item:focus {
-  background: rgba(0, 128, 0, 0.8);
-  color: white;
+.ui-menu-item-wrapper:focus
+// .ui-menu-item:hover,
+// .ui-menu-item:focus
+{
+  &:hover,
+  &:focus {
+    background: rgba(0, 128, 0, 0.8);
+    color: white;
+  }
 }
 
 .topics {
@@ -144,14 +153,16 @@
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
   }
-  &:hover,
-  &.focus {
-    color: green;
-  }
+
+  // &:hover,
+  // &.focus {
+  //   color: green;
+  // }
 }
 .topics-list__link {
   margin-left: 1rem;
   color: rgb(225, 16, 131);
+  @include transitions(color);
   &:hover,
   &.focus {
     color: green;

@@ -51,6 +51,10 @@
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   color: black;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+
   &:focus,
   &:hover {
     color: green;
