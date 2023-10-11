@@ -66,11 +66,19 @@
   margin-bottom: 2rem;
 }
 .oneArticle-gallery__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: rgb(225, 16, 131);
   &:hover,
   &:focus {
     text-decoration: underline;
   }
+}
+.oneArticle-gallery__icon {
+  fill: currentColor;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .oneArticle-comments {
   // padding: 0 2rem;
