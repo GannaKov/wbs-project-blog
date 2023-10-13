@@ -47,6 +47,7 @@ body {
   color: rgb(28, 28, 28);
   border-radius: 5px;
   font-size: 1.5rem;
+  font-family: "Josefin", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .wrapper {
@@ -90,25 +91,27 @@ body {
   position: relative;
   color: green;
 }
-.header-nav__link.current-link::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: green;
-}
-.header-nav__link.current-link::before {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: green;
+@media screen and (min-width: 768px) {
+  .header-nav__link.current-link::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: green;
+  }
+  .header-nav__link.current-link::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: green;
+  }
 }
 
 .header-nav {
@@ -131,7 +134,7 @@ body {
 .hero {
   display: flex;
   padding-top: 50px;
-  padding-bottom: 220px;
+  padding-bottom: 200px;
   background-size: cover;
   background-color: rgb(196, 196, 196);
   background-image: linear-gradient(rgba(47, 48, 58, 0.3), rgba(47, 48, 58, 0.3)), url(../images/hero-bg.jpg);
@@ -156,7 +159,7 @@ body {
 }
 
 .hero-title {
-  margin-left: 60px;
+  margin-left: 40px;
   color: rgba(255, 252, 252, 0.63);
   display: flex;
   flex-direction: column;
@@ -175,7 +178,7 @@ body {
 }
 
 .hero-title__sm {
-  font-size: 24px;
+  font-size: 32px;
 }
 @media screen and (min-width: 768px) {
   .hero-title__sm {
@@ -189,7 +192,7 @@ body {
 }
 
 .hero-title__lg {
-  font-size: 40px;
+  font-size: 60px;
 }
 @media screen and (min-width: 768px) {
   .hero-title__lg {
@@ -277,11 +280,13 @@ body {
   padding-left: 0.5rem;
   border-radius: 5px;
   margin-bottom: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-family: "Josefin", sans-serif;
 }
 
 .ui-menu .ui-menu-item {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-family: "Josefin", sans-serif;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -437,6 +442,7 @@ body {
 }
 
 .article__date {
+  font-family: "Crimson Text", serif;
   margin-bottom: 2rem;
   font-size: 1.2rem;
   color: rgba(225, 16, 131, 0.9);
@@ -597,6 +603,7 @@ body {
   border-radius: 5px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   justify-self: center;
+  font-family: "Crimson Text", serif;
 }
 @media screen and (min-width: 768px) {
   .about-wrap {
@@ -608,7 +615,7 @@ body {
 .about-img__wrap {
   width: 250px;
   height: 250px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 4rem;
   border-radius: 50%;
   border: 3px solid yellowgreen;
   overflow: hidden;
@@ -616,7 +623,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .about-img__wrap {
-    margin-bottom: 6rem;
+    margin-bottom: 7rem;
   }
 }
 
@@ -860,10 +867,11 @@ body {
 }
 
 .comments-date {
+  font-family: "Crimson Text", serif;
   margin-left: 1rem;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
-  font-style: oblique;
+  font-style: italic;
 }
 
 .comments-text {
