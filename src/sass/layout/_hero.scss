@@ -1,8 +1,12 @@
 .hero {
+  // position: relative;
   display: flex;
-  justify-content: center;
 
-  padding: 220px 0;
+  // justify-content: center;
+
+  // padding: 220px 0;
+  padding-top: 50px;
+  padding-bottom: 220px;
   background-size: cover;
   background-color: rgba(196, 196, 196, 1);
   background-image: linear-gradient(
@@ -12,15 +16,57 @@
     url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
-
+  @include tablet {
+    margin-top: 1rem;
+    padding-top: 105px;
+    padding-bottom: 155px;
+  }
   @include desktop {
+    margin-top: 3rem;
+    padding-top: 175px;
+    padding-bottom: 245px;
     grid-column: 1 / -1; //1/3
 
     /* needed for the floated layout */
     // clear: both;
   }
 }
-.hero__title {
-  color: rgba(255, 252, 252, 0.718);
+.hero-title {
+  margin-left: 60px;
+
+  color: rgba(255, 252, 252, 0.63);
+  // color: rgb(93, 91, 92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Lora', serif;
+  @include tablet {
+    margin-left: 120px;
+  }
+  @include desktop {
+    margin-left: 180px;
+  }
 }
 ////rgba(47, 48, 58, 0.4)
+.hero-title__sm {
+  // position: absolute;
+  // top: -20%;
+  font-size: 24px;
+  @include tablet {
+    font-size: 24px;
+  }
+  @include desktop {
+    font-size: 32px;
+  }
+}
+.hero-title__lg {
+  // position: absolute;
+  // top: -13%;
+  font-size: 40px;
+  @include tablet {
+    font-size: 60px;
+  }
+  @include desktop {
+    font-size: 80px;
+  }
+}

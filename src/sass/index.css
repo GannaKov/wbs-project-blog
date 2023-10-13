@@ -130,23 +130,76 @@ body {
 
 .hero {
   display: flex;
-  justify-content: center;
-  padding: 220px 0;
+  padding-top: 50px;
+  padding-bottom: 220px;
   background-size: cover;
   background-color: rgb(196, 196, 196);
   background-image: linear-gradient(rgba(47, 48, 58, 0.3), rgba(47, 48, 58, 0.3)), url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-top: 1rem;
+    padding-top: 105px;
+    padding-bottom: 155px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
+    margin-top: 3rem;
+    padding-top: 175px;
+    padding-bottom: 245px;
     grid-column: 1/-1;
     /* needed for the floated layout */
   }
 }
 
-.hero__title {
-  color: rgba(255, 252, 252, 0.718);
+.hero-title {
+  margin-left: 60px;
+  color: rgba(255, 252, 252, 0.63);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lora", serif;
+}
+@media screen and (min-width: 768px) {
+  .hero-title {
+    margin-left: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    margin-left: 180px;
+  }
+}
+
+.hero-title__sm {
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  .hero-title__sm {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-title__sm {
+    font-size: 32px;
+  }
+}
+
+.hero-title__lg {
+  font-size: 40px;
+}
+@media screen and (min-width: 768px) {
+  .hero-title__lg {
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-title__lg {
+    font-size: 80px;
+  }
 }
 
 .sidebar {
