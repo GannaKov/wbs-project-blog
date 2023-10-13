@@ -8,6 +8,7 @@
   justify-self: center;
   // font-family: 'Libre Baskerville', serif;
   font-family: 'Crimson Text', serif;
+  font-style: italic;
   //   max-width: 800px;
   @include tablet {
     padding-top: 5rem;
@@ -35,14 +36,14 @@
 }
 .about_title {
   margin-bottom: 4rem;
-  font-style: italic;
-  font-size: 2rem;
+
+  font-size: 2.1rem;
   & p {
     text-align: center;
   }
 }
 .about-txt {
-  font-style: italic;
+  font-size: 1.6rem;
   margin: 0 auto;
   width: 70%;
   //   margin-bottom: 3rem;
