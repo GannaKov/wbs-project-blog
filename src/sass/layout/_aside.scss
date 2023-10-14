@@ -125,15 +125,27 @@
     color: white;
   }
 }
-
-.topics {
+.topics-cover {
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
+}
+.topics {
+  margin-right: 1rem;
   text-decoration: underline;
+  @include desktop {
+    margin-right: 0;
+  }
+}
+.topics__icon {
+  @include desktop {
+    display: none;
+  }
 }
 .topics-list {
   padding-right: 2rem;
   padding-left: 2rem;
-  height: 87px;
+  height: 53px;
   overflow: scroll;
   border: 1px solid rgb(173, 171, 171);
   border-radius: 5px;
@@ -168,8 +180,8 @@
   }
 }
 .topics-list__item {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   @include desktop {
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;

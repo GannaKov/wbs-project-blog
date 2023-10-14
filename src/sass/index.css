@@ -354,15 +354,32 @@ body {
   color: white;
 }
 
-.topics {
+.topics-cover {
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
+}
+
+.topics {
+  margin-right: 1rem;
   text-decoration: underline;
+}
+@media screen and (min-width: 1200px) {
+  .topics {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .topics__icon {
+    display: none;
+  }
 }
 
 .topics-list {
   padding-right: 2rem;
   padding-left: 2rem;
-  height: 87px;
+  height: 53px;
   overflow: scroll;
   border: 1px solid rgb(173, 171, 171);
   border-radius: 5px;
@@ -396,8 +413,8 @@ body {
 }
 
 .topics-list__item {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 @media screen and (min-width: 1200px) {
   .topics-list__item {
