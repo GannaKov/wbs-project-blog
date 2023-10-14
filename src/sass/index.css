@@ -362,7 +362,7 @@ body {
 .topics-list {
   padding-right: 2rem;
   padding-left: 2rem;
-  height: 53px;
+  height: 87px;
   overflow: scroll;
   border: 1px solid rgb(173, 171, 171);
   border-radius: 5px;
@@ -396,8 +396,8 @@ body {
 }
 
 .topics-list__item {
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 @media screen and (min-width: 1200px) {
   .topics-list__item {
