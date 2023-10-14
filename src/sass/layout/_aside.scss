@@ -134,12 +134,13 @@
   padding-right: 2rem;
   padding-left: 2rem;
   height: 53px;
-  overflow: auto;
+  overflow: scroll;
   border: 1px solid rgb(173, 171, 171);
   border-radius: 5px;
   list-style-type: disc;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1);
+
   & li::marker {
     content: '●';
     color: rgba(0, 0, 0, 0.852);
