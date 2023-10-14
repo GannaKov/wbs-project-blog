@@ -147,14 +147,15 @@
     vertical-align: middle;
     font-size: 1rem;
   }
-  /* Стилизация скроллбара для браузеров на основе Chromium (Chrome, Edge) */
+
   &::-webkit-scrollbar {
-    width: 10px; /* Ширина скроллбара */
+    -webkit-appearance: none;
+    width: 10px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: rgba(214, 213, 213, 0.841); /* Цвет бара прокрутки */
-    border-radius: 2px; /* Скругление углов бара */
+    background-color: rgba(214, 213, 213, 0.841); /* Color scroll */
+    border-radius: 2px;
     border: 1px solid rgba(0, 0, 0, 0.63);
   }
 
