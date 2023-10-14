@@ -25,11 +25,14 @@
   width: 100%;
   outline: transparent;
   -webkit-appearance: none;
-  height: 40px;
+  height: 50px;
   padding-left: 0.5rem;
   border: 1px solid rgb(211, 211, 211);
   border-radius: 5px;
   background: white;
+  @include desktop {
+    height: 40px;
+  }
   @include transitions(border-color);
   &:hover,
   &:focus {
@@ -43,13 +46,17 @@
   justify-content: center;
   right: 12px;
   bottom: 0;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   // padding-left: 0px;
   // padding-right: 0px;
   border: none;
   outline: none;
   background-color: transparent;
+  @include desktop {
+    width: 40px;
+    height: 40px;
+  }
 }
 // .sidebar-search__icon {
 // }
@@ -69,13 +76,20 @@
 }
 .ui-selectmenu-button {
   background: rgb(255, 255, 255);
-  height: 44px;
+  height: 53px;
   padding-left: 0.5rem;
   border-radius: 5px;
   margin-bottom: 2rem;
   font-size: 1.3rem;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  @include desktop {
+    height: 44px;
+  }
 }
 // .ui-selectmenu-text {
 //   font-size: 1.1rem;
@@ -119,7 +133,7 @@
 .topics-list {
   padding-right: 2rem;
   padding-left: 2rem;
-  height: 44px;
+  height: 53px;
   overflow: auto;
   border: 1px solid rgb(173, 171, 171);
   border-radius: 5px;
@@ -127,8 +141,8 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1);
   & li::marker {
-    content: '●'; /* Изменяем маркер на круг (●) */
-    color: rgba(0, 0, 0, 0.852); /* Меняем цвет кружочка */
+    content: '●';
+    color: rgba(0, 0, 0, 0.852);
     vertical-align: middle;
     font-size: 1rem;
   }
@@ -142,6 +156,7 @@
     border-radius: 2px; /* Скругление углов бара */
     border: 1px solid rgba(0, 0, 0, 0.63);
   }
+
   @include desktop {
     height: 100%;
     padding-right: 0;
@@ -151,17 +166,12 @@
   }
 }
 .topics-list__item {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 13px;
+  padding-bottom: 13px;
   @include desktop {
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
   }
-
-  // &:hover,
-  // &.focus {
-  //   color: green;
-  // }
 }
 .topics-list__link {
   margin-left: 1rem;

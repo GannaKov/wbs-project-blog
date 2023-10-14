@@ -63,8 +63,11 @@ body {
   }
 }
 
-.header {
-  padding: 2rem 1.5rem;
+@media screen and (min-width: 768px) {
+  .header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 @media screen and (min-width: 1200px) {
   .header {
@@ -75,6 +78,12 @@ body {
 
 .logo-img {
   width: 32px;
+  padding: 2rem 0;
+}
+
+.header-nav {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
 }
 
 .header-nav__list {
@@ -84,8 +93,34 @@ body {
 @media screen and (min-width: 768px) {
   .header-nav__list {
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
+}
+
+.header-nav__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .header-nav__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.header-nav__link {
+  color: black;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+}
+@media screen and (min-width: 768px) {
+  .header-nav__link {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+.header-nav__link:focus, .header-nav__link:hover {
+  color: green;
 }
 
 .header-nav__link.current-link {
@@ -96,7 +131,7 @@ body {
   .header-nav__link.current-link::after {
     content: "";
     position: absolute;
-    bottom: -1px;
+    bottom: 10px;
     left: 0;
     width: 100%;
     height: 3px;
@@ -106,30 +141,13 @@ body {
   .header-nav__link.current-link::before {
     content: "";
     position: absolute;
-    top: 1px;
+    top: 10px;
     left: 0;
     width: 100%;
     height: 3px;
     border-radius: 2px;
     background-color: green;
   }
-}
-
-.header-nav {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-}
-
-.header-nav__link {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  color: black;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: linear;
-}
-.header-nav__link:focus, .header-nav__link:hover {
-  color: green;
 }
 
 .hero {
@@ -235,7 +253,7 @@ body {
   width: 100%;
   outline: transparent;
   -webkit-appearance: none;
-  height: 40px;
+  height: 50px;
   padding-left: 0.5rem;
   border: 1px solid rgb(211, 211, 211);
   border-radius: 5px;
@@ -243,6 +261,11 @@ body {
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .sidebar-search__input {
+    height: 40px;
+  }
 }
 .sidebar-search__input:hover, .sidebar-search__input:focus {
   border-color: green;
@@ -255,11 +278,17 @@ body {
   justify-content: center;
   right: 12px;
   bottom: 0;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border: none;
   outline: none;
   background-color: transparent;
+}
+@media screen and (min-width: 1200px) {
+  .sidebar-search__btn {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .dpd-label {
@@ -278,13 +307,22 @@ body {
 
 .ui-selectmenu-button {
   background: rgb(255, 255, 255);
-  height: 44px;
+  height: 53px;
   padding-left: 0.5rem;
   border-radius: 5px;
   margin-bottom: 2rem;
   font-size: 1.3rem;
   font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+@media screen and (min-width: 1200px) {
+  .ui-selectmenu-button {
+    height: 44px;
+  }
 }
 
 .ui-menu .ui-menu-item {
@@ -324,7 +362,7 @@ body {
 .topics-list {
   padding-right: 2rem;
   padding-left: 2rem;
-  height: 44px;
+  height: 53px;
   overflow: auto;
   border: 1px solid rgb(173, 171, 171);
   border-radius: 5px;
@@ -334,8 +372,8 @@ body {
   /* Стилизация скроллбара для браузеров на основе Chromium (Chrome, Edge) */
 }
 .topics-list li::marker {
-  content: "●"; /* Изменяем маркер на круг (●) */
-  color: rgba(0, 0, 0, 0.852); /* Меняем цвет кружочка */
+  content: "●";
+  color: rgba(0, 0, 0, 0.852);
   vertical-align: middle;
   font-size: 1rem;
 }
@@ -358,8 +396,8 @@ body {
 }
 
 .topics-list__item {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 @media screen and (min-width: 1200px) {
   .topics-list__item {
