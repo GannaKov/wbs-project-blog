@@ -1,21 +1,30 @@
-// import axios from 'axios';
-// const BASEURL = 'https://posts.free.beeceptor.com/posts';
+//// import axios from 'axios';
+//// const BASEURL = 'https://posts.free.beeceptor.com/posts';
 
-const readMore = document.querySelector('.content-list__link-1');
-// const oneArticle = document.querySelector('.oneArticle-article');
+//const readMoreLink = document.querySelector('.content-list__link-1');
 
-export function onListenerReadMore() {
-  readMore.addEventListener('click', onReadMoreClick);
+//// const oneArticle = document.querySelector('.oneArticle-article');
+
+// export function onListenerReadMore() {
+//   readMoreLink.addEventListener('click', onReadMoreClick);
+// }
+function onClickReadMoreLink(e) {
+  //e.preventDefault();
+  //cleanRender(refs.galleryEl);
+  fetchMovies(e.target.dataset.page);
 }
+//----это я взяла со страницы atricle.js
 
-function onReadMoreClick(event) {
-  event.preventDefault();
-  const postId = 1;
-
-  window.location.href = `./article-page.html?post=${postId}`;
-  readMore.removeEventListener('click', onReadMoreClick);
-}
+// до сюда
 // function onReadMoreClick(event) {
+//   event.preventDefault();
+//   const postId = 1;
+
+//   window.location.href = `./article-page.html?post=${postId}`;
+//   readMoreLink.removeEventListener('click', onReadMoreClick);
+// }
+
+//// function onReadMoreClick(event) {
 //   event.preventDefault();
 //   const postId = 1;
 //   fetchArticle(postId);
@@ -44,4 +53,4 @@ function onReadMoreClick(event) {
 //       </div>`;
 //   console.log('basic', basicMarkup);
 //   oneArticle.innerHTML = basicMarkup;
-// }
+//// }
