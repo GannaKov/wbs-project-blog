@@ -1,6 +1,8 @@
+const links = document.querySelectorAll('.header-nav__link');
+
 function setCurrentLink() {
   const currentPage = window.location.pathname.split('/').pop();
-  const links = document.querySelectorAll('.header-nav__link');
+  //const links = document.querySelectorAll('.header-nav__link');
 
   links.forEach(link => {
     if (link.getAttribute('href').split('/').pop() === currentPage) {
@@ -17,7 +19,7 @@ export function currentLinkOperation() {
 function onCurrentLinkOperation() {
   setCurrentLink();
 
-  const links = document.querySelectorAll('.header-nav__link');
+  //const links = document.querySelectorAll('.header-nav__link');
   links.forEach(link => {
     link.addEventListener('click', function (event) {
       const href = link.getAttribute('href');
