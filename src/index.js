@@ -18,10 +18,10 @@ const contentList = document.querySelector('.content-list');
 //   window.location.href = `${basePath}index.html`;
 //   console.log('hier');
 // }
-if (window.location.pathname.endsWith('/index.html')) {
-  // Перенаправить на главную страницу без "index.html" в URL
-  window.location.href = window.location.href.replace('/index.html', '/');
-}
+// if (window.location.pathname.endsWith('/index.html')) {
+//   // Перенаправить на главную страницу без "index.html" в URL
+//   window.location.href = window.location.href.replace('/index.html', '/');
+// }
 //-------------------
 
 //---------------
