@@ -69,23 +69,24 @@ function renderArticlesList(articles) {
     contentMarkup = `<li class="content-list__item"><p style="text-align:center">UPS... Nothing found!</p></li>`;
   }
 
-  // console.log('contentMarkup', contentMarkup);
   contentList.insertAdjacentHTML('beforeend', contentMarkup);
-  const readMoreLinks = document.querySelectorAll('.content-list__link');
-  // console.log('readMoreLinks', readMoreLinks);
-  readMoreLinkOperation(readMoreLinks);
+  // const readMoreLinks = document.querySelectorAll('.content-list__link');
+  //readMoreLinkOperation(readMoreLinks);
 }
-//--------------------------------------read more
+//----------------read more
+function readMoreLinkOperation() {
+  contentList.addEventListener('click', onClickReadMoreLink);
+}
 
-function readMoreLinkOperation(readMoreLinks) {
-  readMoreLinks.forEach(link => {
-    link.addEventListener('click', onClickReadMoreLink);
-  });
-}
+// function readMoreLinkOperation(readMoreLinks) { Work!!!! back or not?
+//   readMoreLinks.forEach(link => {
+//     link.addEventListener('click', onClickReadMoreLink);
+//   });
+// }
 
 function onClickReadMoreLink(e) {
   e.preventDefault();
-  //cleanRender(refs.galleryEl);
+
   // fetchArticle(e.target.dataset.post);//ЭТО НАДО ДЛЯ ФЕТЧ!!!!! ТОЛЬКО НАДО ПЕРЕЙТИ НА АРТИКЛ ДЖС
   console.log('target', e.target.dataset.post);
   console.log('href', `./article-page.html?post=${e.target.dataset.post}`);
@@ -95,9 +96,9 @@ function onClickReadMoreLink(e) {
 
 renderArticlesList(articles); //УБРАТЬ ДЛЯ ФЕТЧ!!!!!!
 //поменять ссылку на кнопку readmore
+readMoreLinkOperation(); //????????????
 //-----------------aside--------
 const topicLict = document.querySelector('.topics-list');
-topicLict.addEventListener('click', onTopicClick);
 
 function onTopicClick(e) {
   //e.preventDefault();
@@ -112,3 +113,8 @@ function onTopicClick(e) {
 
   renderArticlesList(tagPosts);
 }
+function topicsControl() {
+  topicLict.addEventListener('click', onTopicClick);
+}
+topicsControl();
+//------------------dpd contries
