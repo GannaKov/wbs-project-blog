@@ -62,7 +62,7 @@ export const articles = [
       },
     ],
   },
-  ,
+
   {
     id: 4,
     title: 'Sommer in Germany',
