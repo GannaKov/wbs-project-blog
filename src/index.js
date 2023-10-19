@@ -41,7 +41,7 @@ async function fetchArticles() {
 }
 
 function renderArticlesList(articles) {
-  // console.log('articles in render', articles);
+  console.log('articles in render', articles);
   const contentMarkup = articles
     .map(
       article =>
@@ -55,7 +55,7 @@ function renderArticlesList(articles) {
         </div>
       </article>
       <a class="content-list__link" data-post="${article.id}"
-        href="">Read more...</a> 
+        href="">Read more...</a>
         <p class="content-list__comments">
        <span class="text-dashed"><span class="comments-quantity">${article.comments.length}</span>&nbsp;comments</span>
       </p>
@@ -88,3 +88,4 @@ function onClickReadMoreLink(e) {
 
 renderArticlesList(articles); //УБРАТЬ ДЛЯ ФЕТЧ!!!!!!
 //поменять ссылку на кнопку readmore
+//-----------------aside--------

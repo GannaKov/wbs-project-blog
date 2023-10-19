@@ -17,7 +17,7 @@ const countries = [
   'Philippines',
   'Cuba',
   'Mexico',
-  'Sweden',
+  'Spain',
   'Austria',
 ];
 
