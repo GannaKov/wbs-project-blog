@@ -66,7 +66,6 @@ function renderArticlesList(articles) {
       )
       .join('');
   } else {
-    console.log('nhth');
     contentMarkup = `<li class="content-list__item"><p style="text-align:center">UPS... Nothing found!</p></li>`;
   }
 
@@ -108,7 +107,7 @@ function onTopicClick(e) {
   const tagPosts = articles.filter(article => {
     return article.tags.includes(targetTag);
   });
-  console.log(tagPosts);
+
   contentList.innerHTML = '';
 
   renderArticlesList(tagPosts);
