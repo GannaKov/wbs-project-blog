@@ -1,2 +1,0 @@
-!function(){var t=document.querySelectorAll(".header-nav__link");function n(){var n;n=window.location.pathname.split("/").pop(),t.forEach((function(t){t.getAttribute("href").split("/").pop()===n?t.classList.add("current-link"):t.classList.remove("current-link")})),t.forEach((function(t){t.addEventListener("click",(function(n){t.getAttribute("href").split("/").pop()===window.location.pathname.split("/").pop()&&n.preventDefault()}))}))}document.addEventListener("DOMContentLoaded",n)}();
-//# sourceMappingURL=contact-page.0169a893.js.map

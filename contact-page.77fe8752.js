@@ -1,2 +1,0 @@
-const t=document.querySelectorAll(".header-nav__link");function e(){!function(){const e=window.location.pathname.split("/").pop();t.forEach((t=>{t.getAttribute("href").split("/").pop()===e?t.classList.add("current-link"):t.classList.remove("current-link")}))}(),t.forEach((t=>{t.addEventListener("click",(function(e){t.getAttribute("href").split("/").pop()===window.location.pathname.split("/").pop()&&e.preventDefault()}))}))}document.addEventListener("DOMContentLoaded",e);
-//# sourceMappingURL=contact-page.77fe8752.js.map
