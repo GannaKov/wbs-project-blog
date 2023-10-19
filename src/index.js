@@ -10,7 +10,7 @@ const basePath = '/wbs-project-blog/';
 const BACKENDURL = 'https://posts.free.beeceptor.com/posts';
 const contentList = document.querySelector('.content-list');
 
-// Перенаправляем на базовую страницу, если путь не указан
+// Перенаправляем на базовую страницу, если путь не указан ПОка это убрала!!!
 // if (
 //   window.location.pathname === '/' ||
 //   window.location.pathname === `${basePath}`
@@ -18,6 +18,10 @@ const contentList = document.querySelector('.content-list');
 //   window.location.href = `${basePath}index.html`;
 //   console.log('hier');
 // }
+if (window.location.pathname.endsWith('/index.html')) {
+  // Перенаправить на главную страницу без "index.html" в URL
+  window.location.href = window.location.href.replace('/index.html', '/');
+}
 //-------------------
 
 //---------------
