@@ -1,9 +1,6 @@
-$('#country').selectmenu().selectmenu('menuWidget').addClass('overflow');
-$('.dpd-select').selectmenu({
-  width: 240,
-});
-
-const dpd = document.querySelector('.dpd-select');
+// import { $, jQuery } from 'jquery';
+import { setOutput } from '../../../src/index.js';
+('use strict');
 const countries = [
   'Italy',
   'Germany',
@@ -20,16 +17,36 @@ const countries = [
   'Spain',
   'Austria',
 ];
-
 const sortedCountries = [...countries].sort((a, b) => a.localeCompare(b));
-function renderMenu(el, arr) {
-  const murkup = arr
-    .map(item => `<option value=${item}>${item} </option>`)
-    .join('');
-  el.insertAdjacentHTML('beforeend', murkup);
+
+const dpd = document.querySelector('.dpd-select');
+
+export function dpdOperation() {
+  $('#country').selectmenu().selectmenu('menuWidget').addClass('overflow');
+  $('.dpd-select').selectmenu({
+    width: 240,
+  });
+  renderMenu(dpd, sortedCountries);
+  const dpdButton = document.querySelector('.ui-selectmenu-text');
+  dpdButton.textContent = 'Choose the country';
 }
 
-renderMenu(dpd, sortedCountries);
-//---
-const dpdButton = document.querySelector('.ui-selectmenu-text');
-dpdButton.textContent = 'Choose the country';
+function renderMenu(el, arr) {
+  const markup = arr
+    .map(item => `<option value=${item}>${item} </option>`)
+    .join('');
+
+  el.insertAdjacentHTML('beforeend', markup);
+}
+
+//---------------------- change
+
+export function dpdControl() {
+  // dpd.addEventListener('change', setOutput);
+  $('.dpd-select').selectmenu({
+    change: function (event, data) {
+      setOutput(event, data);
+    },
+  });
+  // $('.dpd-select').selectmenu('refresh');
+}

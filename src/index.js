@@ -1,25 +1,26 @@
 'use strict';
 import { articles } from './js/fakeData';
+
 //------------------------
 import axios from 'axios';
 
 import { currentLinkOperation } from './js/customFunction';
+import { dpdOperation, dpdControl } from './js/customFunction';
 
 //-----------------
 const basePath = '/wbs-project-blog/';
 const BACKENDURL = 'https://posts.free.beeceptor.com/posts';
 const contentList = document.querySelector('.content-list');
 
-// Перенаправляем на базовую страницу, если путь не указан ПОка это убрала!!!
 if (
   window.location.pathname === '/' ||
   window.location.pathname === `${basePath}`
 ) {
   //window.location.href = `${basePath}index.html`;
-  console.log('window.location.href', window.location.href);
-  console.log('window.location.pathname', window.location.pathname);
-  console.log(`${window.location.pathname}index.html`);
-  console.log(`${window.location.href}index.html`);
+  // console.log('window.location.href', window.location.href);
+  // console.log('window.location.pathname', window.location.pathname);
+  // console.log(`${window.location.pathname}index.html`);
+  // console.log(`${window.location.href}index.html`);
   window.location.href = `${window.location.href}index.html`;
 }
 // if (window.location.pathname.endsWith('/')) {
@@ -30,6 +31,11 @@ if (
 
 //---------------
 currentLinkOperation();
+dpdOperation();
+dpdControl();
+function setOutput(event, data) {
+  const selectedOptionValue = data.item.value;
+}
 //contentControl(); //надо сделать export/import ВЕРНУТЬ ДЛЯ ФЕТЧ!!!!!
 //-------
 //--------
@@ -96,8 +102,8 @@ function onClickReadMoreLink(e) {
   e.preventDefault();
 
   // fetchArticle(e.target.dataset.post);//ЭТО НАДО ДЛЯ ФЕТЧ!!!!! ТОЛЬКО НАДО ПЕРЕЙТИ НА АРТИКЛ ДЖС
-  console.log('target', e.target.dataset.post);
-  console.log('href', `./article-page.html?post=${e.target.dataset.post}`);
+  // console.log('target', e.target.dataset.post);
+  // console.log('href', `./article-page.html?post=${e.target.dataset.post}`);
   window.location.href = `./article-page.html?post=${e.target.dataset.post}`;
 }
 //./article-page.html/${article.id}
@@ -106,6 +112,7 @@ renderArticlesList(articles); //УБРАТЬ ДЛЯ ФЕТЧ!!!!!!
 //поменять ссылку на кнопку readmore
 readMoreLinkOperation(); //????????????
 //-----------------aside--------
+//---------------- topic -----
 const topicLict = document.querySelector('.topics-list');
 
 function onTopicClick(e) {
@@ -118,7 +125,7 @@ function onTopicClick(e) {
   });
 
   contentList.innerHTML = '';
-
+  // $('.dpd-select').selectmenu('refresh');
   renderArticlesList(tagPosts);
 }
 function topicsControl() {
@@ -126,3 +133,21 @@ function topicsControl() {
 }
 topicsControl();
 //------------------dpd contries
+// export function setOutput(event, data) {
+//   console.log('data.item.value', data.item.value);
+//   const selectedOptionValue = data.item.value;
+// }
+// export function xxx(data) {
+//   console.log(data);
+// }
+export function setOutput(event, data) {
+  const selectedOptionValue = data.item.value;
+
+  const countryChoicePosts = articles.filter(article => {
+    return article.country.includes(selectedOptionValue);
+  });
+
+  contentList.innerHTML = '';
+  window.location.href = `./index.html#${selectedOptionValue.toLowerCase()}`;
+  renderArticlesList(countryChoicePosts);
+}
