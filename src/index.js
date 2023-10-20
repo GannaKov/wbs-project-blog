@@ -12,16 +12,15 @@ const contentList = document.querySelector('.content-list');
 
 // Перенаправляем на базовую страницу, если путь не указан ПОка это убрала!!!
 if (
-  window.location.pathname === '/'
-  //||
-  // window.location.pathname === `${basePath}`
+  window.location.pathname === '/' ||
+  window.location.pathname === `${basePath}`
 ) {
   //window.location.href = `${basePath}index.html`;
   console.log('window.location.href', window.location.href);
   console.log('window.location.pathname', window.location.pathname);
   console.log(`${window.location.pathname}index.html`);
   console.log(`${window.location.href}index.html`);
-  window.location.href = `${window.location.href}index.html`;
+  // window.location.href = `${window.location.href}index.html`;
 }
 // if (window.location.pathname.endsWith('/')) {
 //   // Перенаправить на главную страницу без "index.html" в URL
