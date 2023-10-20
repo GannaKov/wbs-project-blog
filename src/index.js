@@ -102,8 +102,7 @@ function onClickReadMoreLink(e) {
   e.preventDefault();
 
   // fetchArticle(e.target.dataset.post);//ЭТО НАДО ДЛЯ ФЕТЧ!!!!! ТОЛЬКО НАДО ПЕРЕЙТИ НА АРТИКЛ ДЖС
-  // console.log('target', e.target.dataset.post);
-  // console.log('href', `./article-page.html?post=${e.target.dataset.post}`);
+
   window.location.href = `./article-page.html?post=${e.target.dataset.post}`;
 }
 //./article-page.html/${article.id}
@@ -123,9 +122,11 @@ function onTopicClick(e) {
   const tagPosts = articles.filter(article => {
     return article.tags.includes(targetTag);
   });
-
   contentList.innerHTML = '';
-  // $('.dpd-select').selectmenu('refresh');
+  //----
+  const dpdButton = document.querySelector('.ui-selectmenu-text');
+  dpdButton.textContent = 'Choose the country';
+  //----
   renderArticlesList(tagPosts);
 }
 function topicsControl() {
@@ -133,20 +134,13 @@ function topicsControl() {
 }
 topicsControl();
 //------------------dpd contries
-// export function setOutput(event, data) {
-//   console.log('data.item.value', data.item.value);
-//   const selectedOptionValue = data.item.value;
-// }
-// export function xxx(data) {
-//   console.log(data);
-// }
+
 export function setOutput(event, data) {
   const selectedOptionValue = data.item.value;
 
   const countryChoicePosts = articles.filter(article => {
     return article.country.includes(selectedOptionValue);
   });
-
   contentList.innerHTML = '';
   window.location.href = `./index.html#${selectedOptionValue.toLowerCase()}`;
   renderArticlesList(countryChoicePosts);
