@@ -1,0 +1,178 @@
+.backdrop-auth-user {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms linear, visibility 500ms linear;
+  /*без этого не работает обратная анимация*/
+  overflow-y: scroll;
+
+  @include tablet {
+    padding: 208px 159px;
+  }
+}
+
+.modal-auth {
+  position: relative;
+
+  padding: 40px;
+
+  background-color: rgba(255, 255, 255, 1);
+  // margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @media screen and (max-width: 450px) {
+    max-width: 450px;
+  }
+  @media screen and (min-width: 450px) {
+    width: 450px;
+  }
+
+  @include tablet {
+    width: 450px;
+    height: 609px;
+  }
+  @include desktop {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+
+    transition: transform 300ms linear;
+    // .backdrop.is-hidden & {
+    //   transform: translate(-50%, -100%) scale(0) rotate(180deg);
+    // }
+  }
+}
+.modal-auth__button-close {
+  position: absolute;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  top: 8px;
+  right: 8px;
+  align-items: center;
+  justify-content: center;
+  //fill: rgb(28, 28, 28);
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  outline: transparent;
+  background-color: transparent;
+}
+
+.modal-auth__close-icon {
+  fill: rgba(33, 33, 33, 0.5);
+  @include transitions(fill);
+  &:focus,
+  &:hover {
+    fill: green;
+  }
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.form-auth__title {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  // font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+
+  color: rgba(20, 11, 11, 0.941);
+  @media screen and (max-width: 480px) {
+    font-weight: 700;
+
+    line-height: 1.5;
+  }
+  @include desktop {
+    line-height: 1.15;
+  }
+}
+.form-auth {
+  display: flex;
+  flex-direction: column;
+}
+.form-auth__box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.form-auth__lable {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
+
+  //color: rgba(117, 117, 117, 1);
+}
+.form-auth__input {
+  padding-left: 1rem;
+  width: 100%;
+  height: 40px;
+  outline: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.5);
+  border-radius: 4px;
+  @include transitions(border-color);
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    border-color: rgba(0, 128, 0, 0.687);
+  }
+}
+.form-auth__box-button-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.form-auth__btn-submit {
+  margin-bottom: 3rem;
+  width: 80px;
+  height: 40px;
+  background-color: rgba(0, 128, 0, 0.8);
+  color: white;
+  outline: transparent;
+  border-radius: 5px;
+  border-color: transparent;
+  box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.15);
+  @include transitions(background-color, border-color);
+  &:hover,
+  &:focus {
+    background-color: green;
+    border-color: green;
+  }
+}
+.form-auth__registrate {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.title-question-user {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.form-auth__button-reg {
+  color: green;
+  width: 180px;
+  height: 30px;
+  background-color: white;
+  outline: transparent;
+  border-radius: 5px;
+  border-color: transparent;
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px green, 0 0 25px green, 0 0 50px green, 0 0 100px green;
+  }
+}
