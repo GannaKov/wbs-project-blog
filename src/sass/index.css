@@ -38,6 +38,12 @@ body {
   color: rgb(28, 28, 28);
   background-color: #fff;
 }
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
 
 .wrapper {
   max-width: 1200px;
@@ -991,7 +997,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .backdrop-auth-user {
-    padding: 208px 159px;
+    padding-top: 100px;
   }
 }
 
@@ -1062,7 +1068,7 @@ body {
 }
 
 .form-auth__title {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
@@ -1161,6 +1167,9 @@ body {
   outline: transparent;
   border-radius: 5px;
   border-color: transparent;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-auth__button-reg:hover, .form-auth__button-reg:focus {
   box-shadow: 0 0 5px green, 0 0 25px green, 0 0 50px green, 0 0 100px green;

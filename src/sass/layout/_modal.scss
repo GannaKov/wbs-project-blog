@@ -10,7 +10,8 @@
   overflow-y: scroll;
 
   @include tablet {
-    padding: 208px 159px;
+    padding-top: 100px;
+    //padding: 100px 159px;
   }
 }
 
@@ -80,7 +81,7 @@
   pointer-events: none;
 }
 .form-auth__title {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-weight: 700;
   // font-size: 1.5rem;
   line-height: 1.5;
@@ -171,6 +172,7 @@
   outline: transparent;
   border-radius: 5px;
   border-color: transparent;
+  @include transitions(box-shadow);
   &:hover,
   &:focus {
     box-shadow: 0 0 5px green, 0 0 25px green, 0 0 50px green, 0 0 100px green;

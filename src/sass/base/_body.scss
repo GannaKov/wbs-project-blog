@@ -6,5 +6,11 @@ body {
   color: rgb(28, 28, 28);
   background-color: #fff;
   //   color: #444;
+  &.modal-open {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
 }
 //font-family: Century;
