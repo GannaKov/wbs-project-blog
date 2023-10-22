@@ -65,11 +65,10 @@
   border-color: black;
   border-radius: 50%;
   outline: transparent;
-  background-color: transparent;
+  background-color: white;
 }
 
 .modal-auth__close-icon {
-  z-index: 2;
   color: rgba(33, 33, 33, 0.5);
   fill: rgba(33, 33, 33, 0.5);
   @include transitions(fill, color);
@@ -82,12 +81,12 @@
 //!!!!!!!!!!!!!!!!!!!!
 //v2
 .modal-auth__button-close-2 {
-  display: flex;
+  //display: flex;
   width: 40px;
   height: 40px;
 
-  align-items: center;
-  justify-content: center;
+  //   align-items: center;
+  //   justify-content: center;
   color: rgba(33, 33, 33, 0.5);
   border-width: 1px;
   border-style: solid;
@@ -107,7 +106,27 @@
   }
 }
 //v3
+.modal-auth__button-close-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
 
+  color: rgba(33, 33, 33, 0.5);
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 50%;
+  outline: transparent;
+  background-color: transparent;
+}
 .modal-auth__close-icon-3 {
   color: rgba(33, 33, 33, 0.5);
   fill: rgba(33, 33, 33, 0.5);

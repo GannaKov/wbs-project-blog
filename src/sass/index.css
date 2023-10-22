@@ -1055,11 +1055,10 @@ body.modal-open {
   border-color: black;
   border-radius: 50%;
   outline: transparent;
-  background-color: transparent;
+  background-color: white;
 }
 
 .modal-auth__close-icon {
-  z-index: 2;
   color: rgba(33, 33, 33, 0.5);
   fill: rgba(33, 33, 33, 0.5);
   transition-property: fill, color;
@@ -1072,11 +1071,8 @@ body.modal-open {
 }
 
 .modal-auth__button-close-2 {
-  display: flex;
   width: 40px;
   height: 40px;
-  align-items: center;
-  justify-content: center;
   color: rgba(33, 33, 33, 0.5);
   border-width: 1px;
   border-style: solid;
@@ -1096,6 +1092,21 @@ body.modal-open {
 .modal-auth__close-icon-2:focus, .modal-auth__close-icon-2:hover {
   fill: green;
   color: green;
+}
+
+.modal-auth__button-close-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: rgba(33, 33, 33, 0.5);
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 50%;
+  outline: transparent;
+  background-color: transparent;
 }
 
 .modal-auth__close-icon-3 {
