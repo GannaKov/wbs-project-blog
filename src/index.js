@@ -6,7 +6,7 @@ import axios from 'axios';
 
 import { currentLinkOperation } from './js/customFunction';
 import { dpdOperation, dpdControl } from './js/customFunction';
-
+import { modalAuthControl } from './js/controls';
 //-----------------
 const basePath = '/wbs-project-blog/';
 const BACKENDURL = 'https://posts.free.beeceptor.com/posts';
@@ -36,6 +36,7 @@ dpdControl();
 function setOutput(event, data) {
   const selectedOptionValue = data.item.value;
 }
+modalAuthControl();
 //contentControl(); //надо сделать export/import ВЕРНУТЬ ДЛЯ ФЕТЧ!!!!!
 //-------
 //--------
