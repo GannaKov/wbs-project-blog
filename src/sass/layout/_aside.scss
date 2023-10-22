@@ -137,10 +137,29 @@
     margin-right: 0;
   }
 }
-.topics__icon {
+.topics__button {
+  width: 35px;
+  height: 35px;
+  padding-top: 5px;
+
+  //color: rgba(33, 33, 33, 0.5);
+
+  border-color: transparent;
+  outline: transparent;
+  background-color: transparent;
   @include desktop {
     display: none;
+    pointer-events: none;
   }
+}
+.topics__icon--down {
+  fill: green;
+}
+.topics__icon--up {
+  fill: rgb(225, 16, 131);
+}
+.hidden {
+  display: none;
 }
 .topics-list {
   padding-right: 2rem;
@@ -152,7 +171,10 @@
   list-style-type: disc;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1);
-
+  &.full-size {
+    overflow: visible;
+    height: 100%;
+  }
   & li::marker {
     content: '●';
     color: rgba(0, 0, 0, 0.852);

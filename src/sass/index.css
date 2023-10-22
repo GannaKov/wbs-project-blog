@@ -407,10 +407,31 @@ body.modal-open {
   }
 }
 
+.topics__button {
+  width: 35px;
+  height: 35px;
+  padding-top: 5px;
+  border-color: transparent;
+  outline: transparent;
+  background-color: transparent;
+}
 @media screen and (min-width: 1200px) {
-  .topics__icon {
+  .topics__button {
     display: none;
+    pointer-events: none;
   }
+}
+
+.topics__icon--down {
+  fill: green;
+}
+
+.topics__icon--up {
+  fill: rgb(225, 16, 131);
+}
+
+.hidden {
+  display: none;
 }
 
 .topics-list {
@@ -423,6 +444,10 @@ body.modal-open {
   list-style-type: disc;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1);
+}
+.topics-list.full-size {
+  overflow: visible;
+  height: 100%;
 }
 .topics-list li::marker {
   content: "●";
@@ -1046,8 +1071,6 @@ body.modal-open {
   height: 40px;
   top: 18px;
   right: 21px;
-  border-width: 1px;
-  border-style: solid;
   border-color: transparent;
   outline: transparent;
   background-color: transparent;
