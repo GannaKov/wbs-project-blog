@@ -1042,20 +1042,16 @@ body.modal-open {
 
 .modal-auth__button-close {
   position: absolute;
-  display: flex;
   width: 40px;
   height: 40px;
-  top: 8px;
-  right: 8px;
-  align-items: center;
-  justify-content: center;
+  top: 18px;
+  right: 21px;
   color: rgba(33, 33, 33, 0.5);
   border-width: 1px;
   border-style: solid;
-  border-color: black;
-  border-radius: 50%;
+  border-color: transparent;
   outline: transparent;
-  background-color: white;
+  background-color: transparent;
 }
 
 .modal-auth__close-icon {
@@ -1071,6 +1067,7 @@ body.modal-open {
 }
 
 .modal-auth__button-close-2 {
+  display: flex;
   width: 40px;
   height: 40px;
   color: rgba(33, 33, 33, 0.5);
