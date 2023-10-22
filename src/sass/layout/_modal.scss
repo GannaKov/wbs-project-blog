@@ -59,7 +59,7 @@
   right: 8px;
   align-items: center;
   justify-content: center;
-  //fill: rgb(28, 28, 28);
+  color: rgba(33, 33, 33, 0.5);
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
@@ -68,11 +68,13 @@
 }
 
 .modal-auth__close-icon {
+  color: rgba(33, 33, 33, 0.5);
   fill: rgba(33, 33, 33, 0.5);
-  @include transitions(fill);
+  @include transitions(fill, color);
   &:focus,
   &:hover {
     fill: green;
+    color: green;
   }
 }
 .is-hidden {
@@ -140,13 +142,16 @@
 .form-auth__btn-submit {
   margin-bottom: 3rem;
   width: 80px;
-  height: 40px;
+  height: 60px;
   background-color: rgba(0, 128, 0, 0.8);
   color: white;
   outline: transparent;
   border-radius: 5px;
   border-color: transparent;
   box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.15);
+  @include tablet {
+    height: 40px;
+  }
   @include transitions(background-color, border-color);
   &:hover,
   &:focus {
@@ -172,6 +177,7 @@
   outline: transparent;
   border-radius: 5px;
   border-color: transparent;
+
   @include transitions(box-shadow);
   &:hover,
   &:focus {

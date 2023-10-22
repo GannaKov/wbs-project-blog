@@ -86,7 +86,7 @@
 }
 .log_open_btn {
   width: 80px;
-  height: 40px;
+  height: 60px;
   justify-self: end;
   align-self: center;
   background-color: rgba(0, 128, 0, 0.8);
@@ -95,6 +95,9 @@
   border-radius: 5px;
   border-color: transparent;
   box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.15);
+  @include tablet {
+    height: 40px;
+  }
   @include transitions(background-color, border-color);
   &:hover,
   &:focus {

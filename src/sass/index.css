@@ -164,7 +164,7 @@ body.modal-open {
 
 .log_open_btn {
   width: 80px;
-  height: 40px;
+  height: 60px;
   justify-self: end;
   align-self: center;
   background-color: rgba(0, 128, 0, 0.8);
@@ -176,6 +176,11 @@ body.modal-open {
   transition-property: background-color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .log_open_btn {
+    height: 40px;
+  }
 }
 .log_open_btn:hover, .log_open_btn:focus {
   background-color: green;
@@ -1044,6 +1049,7 @@ body.modal-open {
   right: 8px;
   align-items: center;
   justify-content: center;
+  color: rgba(33, 33, 33, 0.5);
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
@@ -1052,13 +1058,15 @@ body.modal-open {
 }
 
 .modal-auth__close-icon {
+  color: rgba(33, 33, 33, 0.5);
   fill: rgba(33, 33, 33, 0.5);
-  transition-property: fill;
+  transition-property: fill, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-auth__close-icon:focus, .modal-auth__close-icon:hover {
   fill: green;
+  color: green;
 }
 
 .is-hidden {
@@ -1132,7 +1140,7 @@ body.modal-open {
 .form-auth__btn-submit {
   margin-bottom: 3rem;
   width: 80px;
-  height: 40px;
+  height: 60px;
   background-color: rgba(0, 128, 0, 0.8);
   color: white;
   outline: transparent;
@@ -1142,6 +1150,11 @@ body.modal-open {
   transition-property: background-color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .form-auth__btn-submit {
+    height: 40px;
+  }
 }
 .form-auth__btn-submit:hover, .form-auth__btn-submit:focus {
   background-color: green;
