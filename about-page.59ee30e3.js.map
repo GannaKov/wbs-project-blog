@@ -1,1 +1,0 @@
-{"mappings":"qeAEA,EAFAA,EAAA,SAEAC","sources":["src/about-page.js"],"sourcesContent":["'use strict';\nimport { currentLinkOperation } from './js/customFunction';\ncurrentLinkOperation();\n"],"names":["parcelRequire","currentLinkOperation"],"version":3,"file":"about-page.59ee30e3.js.map"}

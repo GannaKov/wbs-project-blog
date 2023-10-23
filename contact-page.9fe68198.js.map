@@ -1,1 +1,0 @@
-{"mappings":"ifAEA,EAFAA,EAAA,SAEAC,uB","sources":["src/contact-page.js"],"sourcesContent":["'use strict';\nimport { currentLinkOperation } from './js/customFunction';\ncurrentLinkOperation();\n"],"names":["parcelRequire","currentLinkOperation"],"version":3,"file":"contact-page.9fe68198.js.map"}
