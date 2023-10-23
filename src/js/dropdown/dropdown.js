@@ -1,6 +1,7 @@
 // import { $, jQuery } from 'jquery';
+import { refs } from '../reference/refs';
 import { setOutput } from '../../index.js';
-('use strict');
+
 const countries = [
   'Italy',
   'Germany',
@@ -19,14 +20,14 @@ const countries = [
 ];
 const sortedCountries = [...countries].sort((a, b) => a.localeCompare(b));
 
-const dpd = document.querySelector('.dpd-select');
+//const dpd = document.querySelector('.dpd-select');
 
 export function dpdOperation() {
   $('#country').selectmenu().selectmenu('menuWidget').addClass('overflow');
   $('.dpd-select').selectmenu({
     width: 240,
   });
-  renderMenu(dpd, sortedCountries);
+  renderMenu(refs.dpd, sortedCountries);
   const dpdButton = document.querySelector('.ui-selectmenu-text');
   dpdButton.textContent = 'Choose the country';
 }

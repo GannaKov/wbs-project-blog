@@ -1,8 +1,20 @@
 import axios from 'axios';
+import { refs } from '../reference/refs';
 // const BACKENDURL = 'https://posts.free.beeceptor.com/posts';
-const oneArticle = document.querySelector('.oneArticle-article');
-const oneArticleComments = document.querySelector('.oneArticle-comments');
-const commentsList = document.querySelector('.comments-list');
+// const oneArticle = document.querySelector('.oneArticle-article');
+// const oneArticleComments = document.querySelector('.oneArticle-comments');
+// const commentsList = document.querySelector('.comments-list');
+export function readMoreLinkOperation() {
+  refs.contentList.addEventListener('click', onClickReadMoreLink);
+}
+function onClickReadMoreLink(e) {
+  console.log('in index onClickReadMoreLink');
+  e.preventDefault();
+
+  // fetchArticle(e.target.dataset.post);//ЭТО НАДО ДЛЯ ФЕТЧ!!!!! ТОЛЬКО НАДО ПЕРЕЙТИ НА АРТИКЛ ДЖС
+
+  window.location.href = `./article-page.html?post=${e.target.dataset.post}`;
+}
 // выше с артикле пейдж джис
 //const readMoreLink = document.querySelector('.content-list__link-1');
 
@@ -11,11 +23,12 @@ const commentsList = document.querySelector('.comments-list');
 // export function onListenerReadMore() {
 //   readMoreLink.addEventListener('click', onReadMoreClick);
 // }
-export function onClickReadMoreLink(e) {
-  //e.preventDefault();
-  //cleanRender(refs.galleryEl);
-  fetchArticle(e.target.dataset.post);
-}
+// export function onClickReadMoreLink(e) {
+//   console.log('in readme onClickReadMoreLink');
+//   //e.preventDefault();
+//   //cleanRender(refs.galleryEl);
+//   fetchArticle(e.target.dataset.post);
+// }
 //----это я взяла со страницы atricle.js
 function fetchArticle(postId) {
   fetchData(postId)
@@ -50,11 +63,11 @@ function articleMarkup(post) {
         <p>Perhaps my limits</p>
         </div>`;
 
-  oneArticle.innerHTML = basicMarkup;
+  refs.oneArticle.innerHTML = basicMarkup;
   if (post.comments) {
     const commentsQuantityMarkup = `<div class="comments-quantity-style"><p class="text-dashed "
           ><span class="comments-quantity">${post.comments.length}</span>&nbsp;comments:</p></div>`;
-    oneArticleComments.innerHTML = commentsQuantityMarkup;
+    refs.oneArticleComments.innerHTML = commentsQuantityMarkup;
     const commentsListMarkup = post.comments.map(
       comment => `<li class="comments-item">
 <p class="comments-author">${comment.author}</p>
@@ -62,7 +75,7 @@ function articleMarkup(post) {
 <div class="comments-text"><p>${comment.text}</p></div>
         </li> `
     );
-    commentsList.innerHTML = commentsListMarkup;
+    refs.commentsList.innerHTML = commentsListMarkup;
   }
 }
 

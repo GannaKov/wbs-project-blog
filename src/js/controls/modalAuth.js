@@ -8,7 +8,6 @@ export function modalAuthControl() {
 }
 
 function toggleModalAuth() {
-  console.log('in toggle');
   refs.backdropAuth.classList.toggle('is-hidden');
   refs.bodyEl.classList.toggle('modal-open');
 }

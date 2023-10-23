@@ -6,7 +6,11 @@ import axios from 'axios';
 
 import { currentLinkOperation } from './js/customFunction';
 import { dpdOperation, dpdControl } from './js/dropdown';
-import { modalAuthControl, topicsBtnControl } from './js/controls';
+import {
+  modalAuthControl,
+  topicsBtnControl,
+  readMoreLinkOperation,
+} from './js/controls';
 //-----------------
 const basePath = '/wbs-project-blog/';
 const BACKENDURL = 'https://posts.free.beeceptor.com/posts';
@@ -90,23 +94,18 @@ function renderArticlesList(articles) {
   //readMoreLinkOperation(readMoreLinks);
 }
 //----------------read more
-function readMoreLinkOperation() {
-  contentList.addEventListener('click', onClickReadMoreLink);
-}
-
-// function readMoreLinkOperation(readMoreLinks) { Work!!!! back or not?
-//   readMoreLinks.forEach(link => {
-//     link.addEventListener('click', onClickReadMoreLink);
-//   });
+// export function readMoreLinkOperation() {
+//   contentList.addEventListener('click', onClickReadMoreLink);
 // }
 
-function onClickReadMoreLink(e) {
-  e.preventDefault();
+// function onClickReadMoreLink(e) {
+//   console.log('in index onClickReadMoreLink');
+//   e.preventDefault();
 
-  // fetchArticle(e.target.dataset.post);//ЭТО НАДО ДЛЯ ФЕТЧ!!!!! ТОЛЬКО НАДО ПЕРЕЙТИ НА АРТИКЛ ДЖС
+//   // fetchArticle(e.target.dataset.post);//ЭТО НАДО ДЛЯ ФЕТЧ!!!!! ТОЛЬКО НАДО ПЕРЕЙТИ НА АРТИКЛ ДЖС
 
-  window.location.href = `./article-page.html?post=${e.target.dataset.post}`;
-}
+//   window.location.href = `./article-page.html?post=${e.target.dataset.post}`;
+// }
 //./article-page.html/${article.id}
 
 renderArticlesList(articles); //УБРАТЬ ДЛЯ ФЕТЧ!!!!!!
