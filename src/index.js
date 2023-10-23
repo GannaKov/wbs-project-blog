@@ -5,7 +5,7 @@ import { articles } from './js/fakeData';
 import axios from 'axios';
 
 import { currentLinkOperation } from './js/customFunction';
-import { dpdOperation, dpdControl } from './js/customFunction';
+import { dpdOperation, dpdControl } from './js/dropdown';
 import { modalAuthControl, topicsBtnControl } from './js/controls';
 //-----------------
 const basePath = '/wbs-project-blog/';

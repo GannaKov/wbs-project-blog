@@ -1,5 +1,5 @@
 // import { $, jQuery } from 'jquery';
-import { setOutput } from '../../../src/index.js';
+import { setOutput } from '../../index.js';
 ('use strict');
 const countries = [
   'Italy',
