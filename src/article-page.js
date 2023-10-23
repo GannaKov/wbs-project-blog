@@ -1,10 +1,12 @@
 'use strict';
 import { article_1 } from './js/fakeData';
 import axios from 'axios';
+import { modalAuthControl } from './js/controls';
 const BASEURL = 'https://posts.free.beeceptor.com/posts';
 const oneArticle = document.querySelector('.oneArticle-article');
 const commentsQuantity = document.querySelector('.comments-quantity-style');
 const commentsList = document.querySelector('.comments-list');
+modalAuthControl();
 
 //function getParameterByName(name, url) {
 //  if (!url) url = window.location.href;
