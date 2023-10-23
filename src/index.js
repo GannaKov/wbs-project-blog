@@ -1,6 +1,6 @@
 'use strict';
 import { articles } from './js/fakeData';
-
+import { refs } from './js/reference/refs';
 //------------------------
 import axios from 'axios';
 
@@ -10,11 +10,12 @@ import {
   modalAuthControl,
   topicsBtnControl,
   readMoreLinkOperation,
+  //topicsControl,
 } from './js/controls';
 //-----------------
 const basePath = '/wbs-project-blog/';
 const BACKENDURL = 'https://posts.free.beeceptor.com/posts';
-const contentList = document.querySelector('.content-list');
+//const contentList = document.querySelector('.content-list');
 
 if (
   window.location.pathname === '/' ||
@@ -36,6 +37,7 @@ if (
 //---------------
 currentLinkOperation();
 dpdOperation();
+
 dpdControl();
 topicsBtnControl();
 function setOutput(event, data) {
@@ -61,7 +63,7 @@ async function fetchArticles() {
   return response;
 }
 
-function renderArticlesList(articles) {
+export function renderArticlesList(articles) {
   let contentMarkup;
   if (articles.length > 0) {
     console.log('articles in render', articles);
@@ -89,7 +91,7 @@ function renderArticlesList(articles) {
     contentMarkup = `<li class="content-list__item"><p style="text-align:center">UPS... Nothing found!</p></li>`;
   }
 
-  contentList.insertAdjacentHTML('beforeend', contentMarkup);
+  refs.contentList.insertAdjacentHTML('beforeend', contentMarkup);
   // const readMoreLinks = document.querySelectorAll('.content-list__link');
   //readMoreLinkOperation(readMoreLinks);
 }
@@ -113,36 +115,37 @@ renderArticlesList(articles); //УБРАТЬ ДЛЯ ФЕТЧ!!!!!!
 readMoreLinkOperation(); //????????????
 //-----------------aside--------
 //---------------- topic -----
-const topicLict = document.querySelector('.topics-list');
-
-function onTopicClick(e) {
-  //e.preventDefault();
-
+// const topicList = document.querySelector('.topics-list');
+// const dpdButton = document.querySelector('.ui-selectmenu-text');
+export function onTopicClick(e) {
   const targetTag = e.target.textContent;
 
   const tagPosts = articles.filter(article => {
     return article.tags.includes(targetTag);
   });
-  contentList.innerHTML = '';
+  refs.contentList.innerHTML = '';
   //----
   const dpdButton = document.querySelector('.ui-selectmenu-text');
   dpdButton.textContent = 'Choose the country';
+
   //----
+  console.log(dpdButton.textContent);
+  console.log('dpdButton', dpdButton);
   renderArticlesList(tagPosts);
 }
-function topicsControl() {
-  topicLict.addEventListener('click', onTopicClick);
+export function topicsControl() {
+  refs.topicsList.addEventListener('click', onTopicClick);
 }
 topicsControl();
 //------------------dpd contries
 
-export function setOutput(event, data) {
-  const selectedOptionValue = data.item.value;
+// export function setOutput(event, data) {
+//   const selectedOptionValue = data.item.value;
 
-  const countryChoicePosts = articles.filter(article => {
-    return article.country.includes(selectedOptionValue);
-  });
-  contentList.innerHTML = '';
-  window.location.href = `./index.html#${selectedOptionValue.toLowerCase()}`;
-  renderArticlesList(countryChoicePosts);
-}
+//   const countryChoicePosts = articles.filter(article => {
+//     return article.country.includes(selectedOptionValue);
+//   });
+//   refs.contentList.innerHTML = '';
+//   window.location.href = `./index.html#${selectedOptionValue.toLowerCase()}`;
+//   renderArticlesList(countryChoicePosts);
+// }

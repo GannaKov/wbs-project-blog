@@ -1,7 +1,7 @@
 // import { $, jQuery } from 'jquery';
 import { refs } from '../reference/refs';
-import { setOutput } from '../../index.js';
-
+import { renderArticlesList } from '../../index.js';
+import { articles } from '../fakeData';
 const countries = [
   'Italy',
   'Germany',
@@ -51,3 +51,14 @@ export function dpdControl() {
   });
   // $('.dpd-select').selectmenu('refresh');
 }
+export function setOutput(event, data) {
+  const selectedOptionValue = data.item.value;
+
+  const countryChoicePosts = articles.filter(article => {
+    return article.country.includes(selectedOptionValue);
+  });
+  refs.contentList.innerHTML = '';
+  window.location.href = `./index.html#${selectedOptionValue.toLowerCase()}`;
+  renderArticlesList(countryChoicePosts);
+}
+//-----------------------------
