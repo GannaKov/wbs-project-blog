@@ -1,6 +1,6 @@
 // import { $, jQuery } from 'jquery';
 import { refs } from '../reference/refs';
-import { renderArticlesList } from '../../index.js';
+import { renderArticlesList } from '../renders';
 import { articles } from '../fakeData';
 const countries = [
   'Italy',

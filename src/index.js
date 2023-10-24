@@ -1,6 +1,7 @@
 'use strict';
 import { articles } from './js/fakeData';
 import { refs } from './js/reference/refs';
+import { renderArticlesList } from './js/renders';
 //------------------------
 import axios from 'axios';
 
@@ -63,38 +64,38 @@ async function fetchArticles() {
   return response;
 }
 
-export function renderArticlesList(articles) {
-  let contentMarkup;
-  if (articles.length > 0) {
-    console.log('articles in render', articles);
-    contentMarkup = articles
-      .map(
-        article =>
-          `<li class="content-list__item"> <article class="article__wrapper">
-        <h2 class="article__title">${article.title}</h2>
-        <p class="article__date">${article.date}</p>
-        <div class="article__internal">
-          <img class="article__img" src=${article.url} alt=${article.title}/>
-          <div class="article__text">
-            <p>${article.article}</p> </div>
-        </div>
-      </article>
-      <a class="content-list__link" data-post="${article.id}"
-        href="">Read more...</a>
-        <p class="content-list__comments">
-       <span class="text-dashed"><span class="comments-quantity">${article.comments.length}</span>&nbsp;comments</span>
-      </p>
-    </li>`
-      )
-      .join('');
-  } else {
-    contentMarkup = `<li class="content-list__item"><p style="text-align:center">UPS... Nothing found!</p></li>`;
-  }
+// export function renderArticlesList(articles) {
+//   let contentMarkup;
+//   if (articles.length > 0) {
+//     console.log('articles in render', articles);
+//     contentMarkup = articles
+//       .map(
+//         article =>
+//           `<li class="content-list__item"> <article class="article__wrapper">
+//         <h2 class="article__title">${article.title}</h2>
+//         <p class="article__date">${article.date}</p>
+//         <div class="article__internal">
+//           <img class="article__img" src=${article.url} alt=${article.title}/>
+//           <div class="article__text">
+//             <p>${article.article}</p> </div>
+//         </div>
+//       </article>
+//       <a class="content-list__link" data-post="${article.id}"
+//         href="">Read more...</a>
+//         <p class="content-list__comments">
+//        <span class="text-dashed"><span class="comments-quantity">${article.comments.length}</span>&nbsp;comments</span>
+//       </p>
+//     </li>`
+//       )
+//       .join('');
+//   } else {
+//     contentMarkup = `<li class="content-list__item"><p style="text-align:center">UPS... Nothing found!</p></li>`;
+//   }
 
-  refs.contentList.insertAdjacentHTML('beforeend', contentMarkup);
-  // const readMoreLinks = document.querySelectorAll('.content-list__link');
-  //readMoreLinkOperation(readMoreLinks);
-}
+//   refs.contentList.insertAdjacentHTML('beforeend', contentMarkup);
+//   // const readMoreLinks = document.querySelectorAll('.content-list__link');
+//   //readMoreLinkOperation(readMoreLinks);
+// }
 //----------------read more
 // export function readMoreLinkOperation() {
 //   contentList.addEventListener('click', onClickReadMoreLink);

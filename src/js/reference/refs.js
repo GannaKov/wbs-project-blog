@@ -20,4 +20,7 @@ export const refs = {
   backdropAuth: document.querySelector('.backdrop-auth-user'),
   //   //---
   dpd: document.querySelector('.dpd-select'),
+  //---
+
+  commentsQuantity: document.querySelector('.comments-quantity-style'),
 };
