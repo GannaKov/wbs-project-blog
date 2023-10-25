@@ -1,7 +1,9 @@
 import { refs } from '../reference/refs';
+
 export function renderArticlesList(articles) {
   let contentMarkup;
   if (articles.length > 0) {
+    console.log('articles', typeof articles);
     console.log('articles in render', articles);
     contentMarkup = articles
       .map(
@@ -28,8 +30,6 @@ export function renderArticlesList(articles) {
   }
 
   refs.contentList.insertAdjacentHTML('beforeend', contentMarkup);
-  // const readMoreLinks = document.querySelectorAll('.content-list__link');
-  //readMoreLinkOperation(readMoreLinks);
 }
 
 export function articleMarkup(post) {

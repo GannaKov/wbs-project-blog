@@ -1,152 +1,27 @@
 'use strict';
-import { articles } from './js/fakeData';
-import { refs } from './js/reference/refs';
-import { renderArticlesList } from './js/renders';
-//------------------------
-import axios from 'axios';
+//import { articles } from './js/fakeData';
+// import 'notiflix/dist/notiflix-3.2.6.min.css';
 
-import { currentLinkOperation } from './js/customFunction';
+import { currentLinkOperation, addIndexHtmlToLink } from './js/customFunction';
 import { dpdOperation, dpdControl } from './js/dropdown';
 import {
   modalAuthControl,
   topicsBtnControl,
   readMoreLinkOperation,
-  //topicsControl,
+  topicsControl,
+  contentControl,
 } from './js/controls';
-//-----------------
-const basePath = '/wbs-project-blog/';
-const BACKENDURL = 'https://posts.free.beeceptor.com/posts';
-//const contentList = document.querySelector('.content-list');
 
-if (
-  window.location.pathname === '/' ||
-  window.location.pathname === `${basePath}`
-) {
-  //window.location.href = `${basePath}index.html`;
-  // console.log('window.location.href', window.location.href);
-  // console.log('window.location.pathname', window.location.pathname);
-  // console.log(`${window.location.pathname}index.html`);
-  // console.log(`${window.location.href}index.html`);
-  window.location.href = `${window.location.href}index.html`;
-}
-// if (window.location.pathname.endsWith('/')) {
-//   // Перенаправить на главную страницу без "index.html" в URL
-//   window.location.href = window.location.href.replace('/', '/index.html');
-// }
 //-------------------
-
-//---------------
+addIndexHtmlToLink();
 currentLinkOperation();
+
 dpdOperation();
-
 dpdControl();
+
 topicsBtnControl();
-function setOutput(event, data) {
-  const selectedOptionValue = data.item.value;
-}
-modalAuthControl();
-//contentControl(); //надо сделать export/import ВЕРНУТЬ ДЛЯ ФЕТЧ!!!!!
-//-------
-//--------
-function contentControl() {
-  // console.log('in contentControl');
-  fetchArticles()
-    .then(response => {
-      renderArticlesList(response.data);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-}
-async function fetchArticles() {
-  // console.log('in fetchArticles');
-  const response = await axios(`${BACKENDURL}`);
-  return response;
-}
-
-// export function renderArticlesList(articles) {
-//   let contentMarkup;
-//   if (articles.length > 0) {
-//     console.log('articles in render', articles);
-//     contentMarkup = articles
-//       .map(
-//         article =>
-//           `<li class="content-list__item"> <article class="article__wrapper">
-//         <h2 class="article__title">${article.title}</h2>
-//         <p class="article__date">${article.date}</p>
-//         <div class="article__internal">
-//           <img class="article__img" src=${article.url} alt=${article.title}/>
-//           <div class="article__text">
-//             <p>${article.article}</p> </div>
-//         </div>
-//       </article>
-//       <a class="content-list__link" data-post="${article.id}"
-//         href="">Read more...</a>
-//         <p class="content-list__comments">
-//        <span class="text-dashed"><span class="comments-quantity">${article.comments.length}</span>&nbsp;comments</span>
-//       </p>
-//     </li>`
-//       )
-//       .join('');
-//   } else {
-//     contentMarkup = `<li class="content-list__item"><p style="text-align:center">UPS... Nothing found!</p></li>`;
-//   }
-
-//   refs.contentList.insertAdjacentHTML('beforeend', contentMarkup);
-//   // const readMoreLinks = document.querySelectorAll('.content-list__link');
-//   //readMoreLinkOperation(readMoreLinks);
-// }
-//----------------read more
-// export function readMoreLinkOperation() {
-//   contentList.addEventListener('click', onClickReadMoreLink);
-// }
-
-// function onClickReadMoreLink(e) {
-//   console.log('in index onClickReadMoreLink');
-//   e.preventDefault();
-
-//   // fetchArticle(e.target.dataset.post);//ЭТО НАДО ДЛЯ ФЕТЧ!!!!! ТОЛЬКО НАДО ПЕРЕЙТИ НА АРТИКЛ ДЖС
-
-//   window.location.href = `./article-page.html?post=${e.target.dataset.post}`;
-// }
-//./article-page.html/${article.id}
-
-renderArticlesList(articles); //УБРАТЬ ДЛЯ ФЕТЧ!!!!!!
-//поменять ссылку на кнопку readmore
-readMoreLinkOperation(); //????????????
-//-----------------aside--------
-//---------------- topic -----
-// const topicList = document.querySelector('.topics-list');
-// const dpdButton = document.querySelector('.ui-selectmenu-text');
-export function onTopicClick(e) {
-  const targetTag = e.target.textContent;
-
-  const tagPosts = articles.filter(article => {
-    return article.tags.includes(targetTag);
-  });
-  refs.contentList.innerHTML = '';
-  //----
-  const dpdButton = document.querySelector('.ui-selectmenu-text');
-  dpdButton.textContent = 'Choose the country';
-
-  //----
-  console.log(dpdButton.textContent);
-  console.log('dpdButton', dpdButton);
-  renderArticlesList(tagPosts);
-}
-export function topicsControl() {
-  refs.topicsList.addEventListener('click', onTopicClick);
-}
 topicsControl();
-//------------------dpd contries
 
-// export function setOutput(event, data) {
-//   const selectedOptionValue = data.item.value;
-
-//   const countryChoicePosts = articles.filter(article => {
-//     return article.country.includes(selectedOptionValue);
-//   });
-//   refs.contentList.innerHTML = '';
-//   window.location.href = `./index.html#${selectedOptionValue.toLowerCase()}`;
-//   renderArticlesList(countryChoicePosts);
-// }
+modalAuthControl();
+contentControl();
+readMoreLinkOperation();

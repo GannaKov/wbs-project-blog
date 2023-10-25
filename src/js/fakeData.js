@@ -1,6 +1,7 @@
+//!!!!!!!!!!!!! take date from fakeData.json!!!!!!!!!!!!!
 export const articles = [
   {
-    id: 1,
+    id: '1',
     title: 'How to buy a cheap air ticket',
     date: '15 April 2022',
     url: 'https://drive.google.com/uc?export=download&id=1RBsMN-HQ78FuOYyZUgJ5efDkiX0ewr48',
@@ -43,7 +44,7 @@ export const articles = [
     id: 3,
     title: 'Dahab in February',
     date: '15 April 2023',
-    url: 'https://lh3.googleusercontent.com/pw/ADCreHeC_mK_ymqlZ6-0V5Ji5XJIcK_qxOTQi2ckoLoln6S5TVOSI9PhA1Uhn0uNbpkBqAibZZzCAcFxYgP74HwmvhNXtzu7-WNydW-JD03rONLpViYKtTI2=w2400',
+    url: 'https://drive.google.com/uc?export=download&id=1cQrOmUB8khqf2TkHGTWo_6mabRmBz3Yq',
     article:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni amet veritatis hic eaque vero beatae ducimus pariatur delectus dolores accusantium praesentium, saepe accusamus voluptatem sed iusto itaque sequi repellendus dolor.<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni amet veritatis hic eaque vero beatae ducimus pariatur delectus dolores accusantium praesentium, saepe accusamus voluptatem sed iusto itaque sequi repellendus dolor.Aghl saepe accusamus voluptatem sed iusto itaque sequi repellendus dolor. Gaale saepeac cusamusvoluptatem sed iusto itaque sequi repellendus dolor.',
     likes: 3,
@@ -115,7 +116,7 @@ export const article_1 = {
   id: 1,
   title: 'Amasing travel to Spain',
   date: '21 August 2023',
-  url: 'https://lh3.googleusercontent.com/pw/ADCreHfKj_suRPMwFQNJyKtXn6CpjpOgPM2QPRxIAC6_kpjxp2WBmEnyTyVrHATNUxG-PbfhBovsJUylKknwcf9t8LzJ_5IfpcOGuITVCx8oYPQyarSs825-=w2400',
+  url: 'https://drive.google.com/uc?export=download&id=1USPgLftZfT1vI188UGCbyiop1OV7qs_n',
   article:
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni amet veritatis hic eaque vero beatae ducimus pariatur delectus dolores accusantium praesentium, saepe accusamus voluptatem sed iusto itaque sequi repellendus dolor. <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni amet veritatis hic eaque vero beatae ducimus pariatur delectus dolores accusantium praesentium, saepe accusamus voluptatem sed iusto itaque sequi repellendus dolor.Aghl saepe accusamus voluptatem sed iusto itaque sequi repellendus dolor. <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni amet veritatis hic eaque vero beatae ducimus pariatur delectus dolores accusantium praesentium, saepe accusamus voluptatem sed iusto itaque sequi repellendus dolor.Asaepe accusamus voluptatem sed iusto itaque sequi repellendus dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>Magni amet veritatis hic eaque vero beatae ducimus pariatur delectus dolores accusantium praesentium, saepe accusamus voluptatem sed iusto itaque sequi repellendus dolor.',
   likes: 7,
@@ -137,3 +138,5 @@ export const article_1 = {
     },
   ],
 };
+// /posts/2
+// /posts
