@@ -3,9 +3,12 @@ import { Report } from 'notiflix/build/notiflix-report-aio';
 import { modalAuthControl } from './js/controls';
 import { articleMarkup } from './js/renders';
 import { fetchOneArticle } from './js/customFunction';
+import { refs } from './js/reference/refs';
 
 modalAuthControl();
 oneArticlePageOperation();
+commentsFormControl();
+
 //---------------------------------------
 
 function oneArticlePageOperation() {
@@ -40,4 +43,45 @@ function getParameterByName(name, url) {
   if (!results[2]) return '';
 
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+export function commentsFormControl() {
+  refs.commentsFormTextarea.addEventListener(
+    'click',
+    onCommentsFormTextareaClick
+  );
+  refs.commentsFormTextarea.addEventListener(
+    'input',
+    onCommentsFormTextareaInput
+  );
+  refs.commentsForm.addEventListener('submit', onCommentsFormSubmit);
+
+  document.addEventListener('click', onDocumentClick);
+}
+
+function onCommentsFormTextareaClick(e) {
+  console.log('atr', refs.commentsFormBtn.getAttributes);
+  refs.commentsFormBtn.classList.remove('writeComment-btn--hidden');
+
+  refs.commentsFormInput.classList.remove('writeComment-input--hidden');
+}
+
+function onCommentsFormTextareaInput(e) {
+  refs.commentsFormBtn.removeAttribute('disabled');
+  autoResize(refs.commentsFormTextarea);
+}
+function autoResize(textarea) {
+  // textarea.style.height = 'auto';
+  textarea.style.height = textarea.scrollHeight + 'px';
+}
+function onDocumentClick(e) {
+  if (!refs.commentsForm.contains(e.target)) {
+    refs.commentsFormBtn.classList.add('writeComment-btn--hidden');
+    refs.commentsFormInput.classList.add('writeComment-input--hidden');
+  }
+}
+function onCommentsFormSubmit(e) {
+  e.preventDefault();
+  refs.commentsFormInput.value = '';
+  refs.commentsFormTextarea.value = '';
 }

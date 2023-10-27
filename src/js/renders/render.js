@@ -50,11 +50,10 @@ export function articleMarkup(post) {
         </div>`;
 
   refs.oneArticle.innerHTML = basicMarkup;
-  if (post.comments) {
-    const commentsQuantityMarkup = `<div class="comments-quantity-style"><p class="text-dashed "
+  const commentsQuantityMarkup = `<div class="comments-quantity-style"><p class="text-dashed "
           ><span class="comments-quantity">${post.comments.length}</span>&nbsp;comments:</p></div>`;
-    refs.commentsQuantity.innerHTML = commentsQuantityMarkup;
-
+  refs.commentsQuantity.innerHTML = commentsQuantityMarkup;
+  if (post.comments) {
     const commentsListMarkup = post.comments
       .map(
         comment =>

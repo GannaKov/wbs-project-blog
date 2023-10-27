@@ -1,23 +1,51 @@
 <button class="goBack-btn">
-  <a href="./index.html" class="goBack-link"><svg class="goBack-btn__icon" width="20" height="20">
-              <use href="./images/icons.svg#icon-arrow-left"></use>
-            </svg> Go Back</a>
+  <a href="./index.html" class="goBack-link"
+    ><svg class="goBack-btn__icon" width="20" height="20">
+      <use href="./images/icons.svg#icon-arrow-left"></use>
+    </svg>
+    Go Back</a
+  >
 </button>
 <main class="oneArticle__wrapper">
- <div class="oneArticle-internal">
-  <article class="oneArticle-article">
-     
-    </article>
+  <div class="oneArticle-internal">
+    <article class="oneArticle-article"></article>
     <div class="oneArticle-gallery">
-      <a class="oneArticle-gallery__link" href="">Go to see photo gallery
+      <a class="oneArticle-gallery__link" href=""
+        >Go to see photo gallery
         <svg class="oneArticle-gallery__icon" width="20" height="20">
-              <use href="./images/icons.svg#icon-images"></use>
-            </svg>...</a>
+          <use href="./images/icons.svg#icon-images"></use></svg
+        >...</a
+      >
     </div>
     <div class="oneArticle-comments">
-      <div class="comments-quantity-style"> </div> 
-       <ul class="comments-list"> </ul>
-    </div></div>
+      <div class="comments-quantity-style">comments</div>
+      <ul class="comments-list"></ul>
+
+      <form class="writeComment">
+        <div class="writeComment-textarreaWrapp">
+          <input
+            type="text"
+            class="writeComment-input writeComment-input--hidden"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+          <textarea
+            class="writeComment-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+            aria-label="Enter your your comment"
+          ></textarea>
+        </div>
+        <button
+          class="writeComment-btn writeComment-btn--hidden"
+          type="submit"
+          disabled
+        >
+          Send
+        </button>
+      </form>
     </div>
+  </div>
 </main>
 <!-- <img class="oneArticle__img" src="./images/hero-bg-2.jpg" alt="" /> -->

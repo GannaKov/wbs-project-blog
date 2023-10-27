@@ -26,6 +26,11 @@ export const refs = {
   //----
   guardEl: document.querySelector('.guard'),
   //------------
+  commentsForm: document.querySelector('.writeComment'),
+  commentsFormTextarea: document.querySelector('.writeComment-textarea'),
+  commentsFormInput: document.querySelector('.writeComment-input'),
+  commentsFormBtn: document.querySelector('.writeComment-btn'),
+  //----------
   perPage: 2,
   page: 0,
   totalPosts: undefined,

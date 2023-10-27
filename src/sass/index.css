@@ -1019,6 +1019,103 @@ body.modal-open {
   border-radius: 5px;
 }
 
+.writeComment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.writeComment-textarreaWrapp {
+  margin-bottom: 1rem;
+}
+
+.writeComment-input {
+  background-color: white;
+  color: black;
+  outline: transparent;
+  padding: 0 1rem;
+  border: 1px solid rgb(179, 178, 178);
+  min-height: 1.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.writeComment-input::-moz-placeholder {
+  color: gray;
+}
+.writeComment-input::placeholder {
+  color: gray;
+}
+.writeComment-input:hover, .writeComment-input:focus {
+  background-color: white;
+  border-color: rgb(66, 133, 244);
+}
+
+.writeComment-input--hidden {
+  display: none;
+}
+
+.writeComment-textarea {
+  width: 100%;
+  color: black;
+  outline: transparent;
+  padding: 0 1rem;
+  border: none;
+  border-bottom: 1px solid rgb(179, 178, 178);
+  min-height: 1.5rem;
+  line-height: 2rem;
+  resize: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: visible;
+  overflow-x: hidden;
+  height: auto;
+  transition-property: border-bottom;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.writeComment-textarea::-moz-placeholder {
+  color: gray; /* Установите желаемый цвет для плейсхолдера */
+}
+.writeComment-textarea::placeholder {
+  color: gray; /* Установите желаемый цвет для плейсхолдера */
+}
+.writeComment-textarea:focus {
+  border-bottom: 1px solid rgb(66, 133, 244);
+}
+
+.writeComment-btn {
+  width: 80px;
+  align-self: flex-end;
+  background-color: transparent;
+  outline: transparent;
+  border: 1px solid black;
+  border-radius: 6px;
+  color: black;
+}
+.writeComment-btn:disabled {
+  cursor: not-allowed;
+}
+.writeComment-btn:enabled {
+  color: green;
+  border-color: green;
+  background-color: white;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.writeComment-btn:enabled:hover, .writeComment-btn:enabled:focus {
+  background-color: green;
+  color: white;
+}
+
+.writeComment-btn--hidden {
+  display: none;
+}
+
 .backdrop-auth-user {
   position: fixed;
   top: 0;

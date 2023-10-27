@@ -125,3 +125,145 @@
   border: 1px dashed rgba(0, 128, 0, 0.8);
   border-radius: 5px;
 }
+.writeComment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.writeComment-textarreaWrapp {
+  margin-bottom: 1rem;
+}
+.writeComment-input {
+  background-color: white;
+  color: black;
+  outline: transparent;
+  padding: 0 1rem;
+  border: 1px solid rgb(179, 178, 178);
+  min-height: 1.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  @include transitions(border-color);
+  &::placeholder {
+    color: gray;
+  }
+  &:hover,
+  &:focus {
+    background-color: white;
+    border-color: rgb(66, 133, 244);
+  }
+}
+.writeComment-input--hidden {
+  display: none;
+}
+.writeComment-textarea {
+  width: 100%;
+  color: black;
+  outline: transparent;
+  padding: 0 1rem;
+  border: none;
+  // background-color: transparent;
+  //border: 1px solid rgb(179, 178, 178);
+  border-bottom: 1px solid rgb(179, 178, 178);
+  min-height: 1.5rem;
+  line-height: 2rem;
+  resize: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: visible;
+  overflow-x: hidden;
+  height: auto;
+  @include transitions(border-bottom);
+  &::placeholder {
+    color: gray; /* Установите желаемый цвет для плейсхолдера */
+  }
+
+  &:focus {
+    border-bottom: 1px solid rgb(66, 133, 244);
+  }
+}
+.writeComment-btn {
+  width: 80px;
+  align-self: flex-end;
+  background-color: transparent;
+  outline: transparent;
+  border: 1px solid black;
+  border-radius: 6px;
+  color: black;
+  &:disabled {
+    cursor: not-allowed;
+  }
+  &:enabled {
+    color: green;
+    border-color: green;
+    background-color: white;
+    @include transitions(background-color, color);
+    &:hover,
+    &:focus {
+      background-color: green;
+
+      color: white;
+    }
+  }
+}
+.writeComment-btn--hidden {
+  display: none;
+}
+// .writeComment-textarea::placeholder {
+//   color: gray; /* Установите желаемый цвет для плейсхолдера */
+// }
+// .writeComment-hidden {
+//   display: none;
+// }
+// .writeComment-textareaWrapp {
+//   padding: 4px;
+//   width: 100%;
+//   max-height: 150px;
+//   overflow-y: auto;
+// }
+// .textarreaWrapp-textWrapp {
+//   min-height: 1.5em;
+// }
+// .textareaWrapp-text {
+//   max-width: 100%;
+//   overflow: hidden;
+//   pointer-events: none;
+//   position: absolute;
+//   bottom: 3px;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+// }
+// .textareaWrapp {
+//   display: flex;
+//   padding-top: 1rem;
+// }
+// .writeComment-textarea {
+//   background-color: transparent;
+//   border: none;
+//   min-height: 1.5rem;
+//   line-height: 1.5rem;
+//   resize: none;
+//   white-space: pre-wrap;
+//   word-wrap: break-word;
+//   overflow-y: visible;
+//   overflow-x: hidden;
+// }
+// .writeComment-line {
+//   background-color: rgba(0, 0, 0, 0.12);
+//   height: 1px;
+//   left: 0;
+//   margin: 0;
+//   padding: 0;
+//   position: absolute;
+//   width: 100%;
+// }
+// .textarea-open {
+//   transform: scaleX(0);
+//   background-color: #4285f4;
+//   height: 2px;
+//   left: 0;
+//   margin: 0;
+//   padding: 0;
+//   position: absolute;
+//   width: 100%;
+// }
