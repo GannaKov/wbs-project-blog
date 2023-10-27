@@ -1,8 +1,9 @@
 // import { $, jQuery } from 'jquery';
+import { Report } from 'notiflix/build/notiflix-report-aio';
 import { refs } from '../reference/refs';
 import { renderArticlesList } from '../renders';
 // import { articles } from '../fakeData';
-import { fetchArticles } from '../customFunction';
+import { fetchArticlesWithoutScroll } from '../customFunction';
 const countries = [
   'Italy',
   'Germany',
@@ -51,14 +52,24 @@ export function dpdControl() {
 }
 function setOutput(event, data) {
   const selectedOptionValue = data.item.value;
-  fetchArticles()
+  fetchArticlesWithoutScroll()
     .then(response => {
-      const ountryChoicePosts = response.data.filter(article => {
+      const ountryChoicePosts = response.data.posts.filter(article => {
         return article.country.includes(selectedOptionValue);
       });
       renderArticlesList(ountryChoicePosts);
     })
     .catch(error => {
+      Report.info(
+        'Ah (',
+        'Unfortunately my free backend limit has expired and you will not be able to view my beautiful website(((. We have to wait...',
+        'Okay',
+        {
+          width: '320px',
+          titleFontSize: '24px',
+          messageFontSize: '18px',
+        }
+      );
       console.log(error);
     });
 

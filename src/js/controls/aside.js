@@ -1,7 +1,7 @@
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import { refs } from '../reference/refs';
 // import { articles } from '../fakeData';
-import { fetchArticles } from '../customFunction';
+import { fetchArticlesWithoutScroll } from '../customFunction';
 import { renderArticlesList } from '../renders';
 
 export function topicsBtnControl() {
@@ -22,9 +22,10 @@ export function topicsControl() {
 function onTopicClick(e) {
   const targetTag = e.target.textContent;
   refs.contentList.innerHTML = '';
-  fetchArticles()
+
+  fetchArticlesWithoutScroll()
     .then(response => {
-      const tagPosts = response.data.filter(article => {
+      const tagPosts = response.data.posts.filter(article => {
         return article.tags.includes(targetTag);
       });
       renderArticlesList(tagPosts);

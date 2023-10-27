@@ -23,4 +23,15 @@ export const refs = {
   //---
 
   commentsQuantity: document.querySelector('.comments-quantity-style'),
+  //----
+  guardEl: document.querySelector('.guard'),
+  //------------
+  perPage: 2,
+  page: 0,
+  totalPosts: undefined,
+  totalPage: undefined,
 };
+// export let perPage = 2;
+// export let page = 0;
+// export let totalPosts;
+// export let totalPage;

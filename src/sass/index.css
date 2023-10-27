@@ -597,6 +597,11 @@ body.modal-open {
   }
 }
 
+.alertText {
+  color: green;
+  text-align: center;
+}
+
 .footer {
   padding: 2rem 1.5rem;
   background-color: rgb(47, 48, 58);

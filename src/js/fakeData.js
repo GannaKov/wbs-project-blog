@@ -140,3 +140,5 @@ export const article_1 = {
 };
 // /posts/2
 // /posts
+// /posts/total
+// /posts?currentPage=1&limit=2
