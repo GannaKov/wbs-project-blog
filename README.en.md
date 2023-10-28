@@ -94,7 +94,7 @@ the entire list by clicking the icon.
 
 ![filtering articles by country mobile screen ](./assets/dpd-mobile.jpeg)
 
-5. In the footer there is an opportunity to go to social network pages and
+5. In the footer there is an opportunity to go to social media pages and
    subscribe to the newsletter.
 
 **footer section**
@@ -173,8 +173,6 @@ ID.
 
 More detailed information about the status can be viewed by clicking on the
 icon, and in the drop-down window, follow the link `Details`.
-
-![Deployment status](./assets/status.png)
 
 ### Live page
 
