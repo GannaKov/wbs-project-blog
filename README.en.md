@@ -18,58 +18,88 @@ Fake backend created via [app.beeceptor.com](https://app.beeceptor.com/).
      website, author, or other information),
    - contact-page.html (the page on which the user can send a message),
 
-   ![contact-page ](./assets/contact.png)
+**contact-page**
 
-   - article-page.html (a page on which the user can see the entire article,
-     comments on the article, and also leave a comment),
+![contact-page ](./assets/contact.png)
 
-     Going to the page of one article occurs by pressing a button _read more_.
+- article-page.html (a page on which the user can see the entire article,
+  comments on the article, and also leave a comment),
 
-   ![read more button ](./assets/read-more.png)
+  Going to the page of one article occurs by pressing a button _read more_.
 
-   Returning to the page occurs by pressing a button _Go to articles_.
+**read more button**
 
-   ![Go to articles ](./assets/go-back.png)
+![read more button ](./assets/read-more.png)
 
-   Clicking on the comment input element opens the full comment section.
+Returning to the page occurs by pressing a button _Go to articles_.
 
-   ![comment input element ](./assets/comment-notactive.png)
+**Go to articles**
 
-   ![comment section ](./assets/comment-active.png)
+![Go to articles ](./assets/go-back.png)
 
-   - registration/login modal window.
+Clicking on the comment input element opens the full comment section.
 
-   ![modal window mobile screen ](./assets/modal-mobile.jpeg)
+**comment input element**
 
-   ![modal window desctop screen ](./assets/login.png)
+![comment input element ](./assets/comment-notactive.png)
+
+**comment section**
+
+![comment section ](./assets/comment-active.png)
+
+- registration/login modal window.
+
+**modal window mobile screen**
+
+![modal window mobile screen ](./assets/modal-mobile.jpeg)
+
+**modal window desctop screen**
+
+![modal window desctop screen ](./assets/login.png)
 
 3. The header implements navigation across website pages. The current page is
    highlighted and underlined (in the desktop version).
 
-   ![navigation  mobile screen ](./assets/header-mobile.jpeg)
+**navigation mobile screen**
 
-   ![navigation  desctop screen ](./assets/header.png)
+![navigation  mobile screen ](./assets/header-mobile.jpeg)
+
+**navigation desctop screen**
+
+![navigation  desctop screen ](./assets/header.png)
 
 4. On the index page, there are options for filtering articles by tag in the
    topic section or country in the drop-down menu.
 
-   ![filtering articles  mobile screen ](./assets/aside-mobile.jpeg)
+**filtering articles mobile screen**
 
-   ![filtering articles by tag desctop screen ](./assets/topic-desc.png)
+![filtering articles  mobile screen ](./assets/aside-mobile.jpeg)
 
-   In the mobile version, navigation by tags can be done by scrolling or by
-   opening the entire list by clicking the icon.
+**filtering articles by tag desctop screen**
 
-   ![filtering articles by tag mobile screen ](./assets/topics-mobile.jpeg)
+![filtering articles by tag desctop screen ](./assets/topic-desc.png)
 
-   ![filtering articles by country desctop screen ](./assets/country-desc.png)
+In the mobile version, navigation by tags can be done by scrolling or by opening
+the entire list by clicking the icon.
 
-   ![filtering articles by country mobile screen ](./assets/dpd-mobile.jpeg)
+**filtering articles by tag mobile screen**
+
+![filtering articles by tag mobile screen ](./assets/topics-mobile.jpeg)
+
+**filtering articles by country desctop screen**
+
+![filtering articles by country desctop screen ](./assets/country-desc.png)
+
+**filtering articles by country mobile screen**
+
+![filtering articles by country mobile screen ](./assets/dpd-mobile.jpeg)
 
 5. In the footer there is an opportunity to go to social network pages and
    subscribe to the newsletter.
 
-   ![footer section ](./assets/footer.png)
+**footer section**
+
+![footer section ](./assets/footer.png)
 
 ## Technologies Used
 
