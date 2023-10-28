@@ -22,7 +22,7 @@ export function topicsControl() {
 function onTopicClick(e) {
   const targetTag = e.target.textContent;
   refs.contentList.innerHTML = '';
-
+  console.log('in topic');
   fetchArticlesWithoutScroll()
     .then(response => {
       const tagPosts = response.data.posts.filter(article => {

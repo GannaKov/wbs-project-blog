@@ -3,8 +3,6 @@ import { refs } from '../reference/refs';
 export function renderArticlesList(articles) {
   let contentMarkup;
   if (articles.length > 0) {
-    console.log('articles', typeof articles);
-    console.log('articles in render', articles);
     contentMarkup = articles
       .map(
         article =>
@@ -37,7 +35,7 @@ export function articleMarkup(post) {
     ? `<h1 class="article__title">${post.title}</h1>
   <p class="article__date">${post.date}</p>
   <div class="article__internal">
-   <img class="oneArticle__img" src=${post.url} alt="" />
+   <img class="oneArticle__img" src=${post.url} alt="${post.title}" />
         <div class="oneArticle__text">
         <p>${post.article}
          </p>

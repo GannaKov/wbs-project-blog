@@ -20,10 +20,10 @@ export const refs = {
   backdropAuth: document.querySelector('.backdrop-auth-user'),
   //   //---
   dpd: document.querySelector('.dpd-select'),
-  //---
+  //------
 
   commentsQuantity: document.querySelector('.comments-quantity-style'),
-  //----
+  //-------
   guardEl: document.querySelector('.guard'),
   //------------
   commentsForm: document.querySelector('.writeComment'),
@@ -36,7 +36,4 @@ export const refs = {
   totalPosts: undefined,
   totalPage: undefined,
 };
-// export let perPage = 2;
-// export let page = 0;
-// export let totalPosts;
-// export let totalPage;
+

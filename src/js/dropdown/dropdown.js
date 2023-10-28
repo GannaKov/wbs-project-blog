@@ -1,4 +1,3 @@
-// import { $, jQuery } from 'jquery';
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import { refs } from '../reference/refs';
 import { renderArticlesList } from '../renders';
@@ -52,6 +51,7 @@ export function dpdControl() {
 }
 function setOutput(event, data) {
   const selectedOptionValue = data.item.value;
+  console.log('in dpd befor fetch');
   fetchArticlesWithoutScroll()
     .then(response => {
       const ountryChoicePosts = response.data.posts.filter(article => {

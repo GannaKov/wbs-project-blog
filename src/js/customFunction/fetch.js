@@ -2,7 +2,7 @@ import axios from 'axios';
 const BACKENDURL = 'https://posts.free.beeceptor.com/posts';
 
 export async function fetchArticles(perPage, page) {
-  console.log('in fetchArticles', page);
+  console.log('in general fetch');
   const response = await axios(
     `${BACKENDURL}?currentPage=${page}&limit=${perPage}`
   );
@@ -16,6 +16,7 @@ export async function fetchOneArticle(postId) {
   return response;
 }
 export async function fetchArticlesWithoutScroll() {
+  //becouse of fake backend
   console.log('in fetchArticlesWithoutScroll');
   const response = await axios(`${BACKENDURL}`);
 

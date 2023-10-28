@@ -8,7 +8,7 @@ import { observer } from '../customFunction';
 export function contentControl() {
   refs.page = 1;
 
-  console.log('page in contentControl', refs.page);
+  console.log('in general content');
   fetchArticles(refs.perPage, refs.page)
     .then(response => {
       refs.totalPage = Math.ceil(response.data.totalPosts / refs.perPage);
