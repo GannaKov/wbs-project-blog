@@ -901,8 +901,8 @@ body.modal-open {
   outline: none;
   border: 1px solid rgb(221, 218, 218);
   border-radius: 5px;
-  width: 165px;
-  height: 40px;
+  width: 185px;
+  height: 60px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   transition-property: border-color;
   transition-duration: 250ms;
@@ -1023,6 +1023,7 @@ body.modal-open {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .writeComment-textarreaWrapp {

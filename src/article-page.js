@@ -82,6 +82,12 @@ function onDocumentClick(e) {
 }
 function onCommentsFormSubmit(e) {
   e.preventDefault();
+  console.log(
+    'name:',
+    refs.commentsFormInput.value,
+    'comment:',
+    refs.commentsFormTextarea.value
+  );
   refs.commentsFormInput.value = '';
   refs.commentsFormTextarea.value = '';
 }
