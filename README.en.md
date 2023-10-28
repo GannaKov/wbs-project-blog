@@ -7,6 +7,12 @@ features [refer to documentation](https://parceljs.org/).
 
 Fake backend created via [app.beeceptor.com](https://app.beeceptor.com/).
 
+**Attention!** Due to the fact that the free version of the backend Beeceptor
+has a daily limit of 50 requests per day, if the limit is exceeded, the alert
+message will be shown.
+
+![alert ](./assets/alert.png)
+
 ## Description and features of the website
 
 1. Website designed for different screen widths with breakpoints at 480 px, 768
