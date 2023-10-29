@@ -21,10 +21,10 @@ export function topicsControl() {
 }
 
 function onTopicClick(e) {
-  observer.unobserve(refs.guardEl); //it is hier only becouse of Fake backend(2 fetches)
+  observer.unobserve(refs.guardEl); //it is hier only because of Fake backend(2 fetches)
   const targetTag = e.target.textContent;
   refs.contentList.innerHTML = '';
-  console.log('in topic');
+
   fetchArticlesWithoutScroll()
     .then(response => {
       const tagPosts = response.data.posts.filter(article => {

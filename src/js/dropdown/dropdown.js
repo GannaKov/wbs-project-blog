@@ -51,9 +51,9 @@ export function dpdControl() {
   });
 }
 function setOutput(event, data) {
-  observer.unobserve(refs.guardEl); //it is hier only becouse of Fake backend(2 fetches)
+  observer.unobserve(refs.guardEl); //it is hier only because of Fake backend(2 fetches)
   const selectedOptionValue = data.item.value;
-  console.log('in dpd befor fetch');
+
   fetchArticlesWithoutScroll()
     .then(response => {
       const ountryChoicePosts = response.data.posts.filter(article => {
