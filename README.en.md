@@ -59,9 +59,9 @@ Clicking on the comment input element opens the full comment section.
 
 ![modal window mobile screen ](./assets/modal-mobile.jpeg)
 
-**modal window desctop screen**
+**modal window desktop screen**
 
-![modal window desctop screen ](./assets/login.png)
+![modal window desktop screen ](./assets/login.png)
 
 3. The header implements navigation across website pages. The current page is
    highlighted and underlined (in the desktop version).
@@ -70,9 +70,9 @@ Clicking on the comment input element opens the full comment section.
 
 ![navigation  mobile screen ](./assets/header-mobile.jpeg)
 
-**navigation desctop screen**
+**navigation desktop screen**
 
-![navigation  desctop screen ](./assets/header.png)
+![navigation  desktop screen ](./assets/header.png)
 
 4. On the index page, there are options for filtering articles by tag in the
    topic section or country in the drop-down menu.
@@ -81,9 +81,9 @@ Clicking on the comment input element opens the full comment section.
 
 ![filtering articles  mobile screen ](./assets/aside-mobile.jpeg)
 
-**filtering articles by tag desctop screen**
+**filtering articles by tag desktop screen**
 
-![filtering articles by tag desctop screen ](./assets/topic-desc.png)
+![filtering articles by tag desktop screen ](./assets/topic-desc.png)
 
 In the mobile version, navigation by tags can be done by scrolling or by opening
 the entire list by clicking the icon.
@@ -92,9 +92,9 @@ the entire list by clicking the icon.
 
 ![filtering articles by tag mobile screen ](./assets/topics-mobile.jpeg)
 
-**filtering articles by country desctop screen**
+**filtering articles by country desktop screen**
 
-![filtering articles by country desctop screen ](./assets/country-desc.png)
+![filtering articles by country desktop screen ](./assets/country-desc.png)
 
 **filtering articles by country mobile screen**
 
@@ -124,14 +124,14 @@ the entire list by clicking the icon.
 
 ## Files and folders
 
-- All stylesheet parshas should be in the `src/sass` folder and imported into
+- All stylesheet partials should be in the `src/sass` folder and imported into
   the page stylesheets. For example, for `index.html` the style file is named
   `index.scss`.
 - Add images to the `src/images` folder. The assembler optimizes them, but only
   when deploying the production version of the project. All this happens in the
   cloud so as not to burden your computer, as it can take a long time on weak
   machines.
-- All js parshas should be in the `src/js` folder and imported into the page js
+- All js partials should be in the `src/js` folder and imported into the page js
   file. For example, for `index.html` the file is named `index.js`.
 
 ## Deploy

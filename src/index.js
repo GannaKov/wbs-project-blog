@@ -20,7 +20,7 @@ import {
 //-------------------
 addIndexHtmlToLink();
 currentLinkOperation();
-
+contentControl();
 dpdOperation();
 dpdControl();
 
@@ -28,5 +28,5 @@ topicsBtnControl();
 topicsControl();
 
 modalAuthControl();
-contentControl();
+
 readMoreLinkOperation();

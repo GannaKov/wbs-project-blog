@@ -1,5 +1,6 @@
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import { refs } from '../reference/refs';
+import { observer } from '../customFunction';
 // import { articles } from '../fakeData';
 import { fetchArticlesWithoutScroll } from '../customFunction';
 import { renderArticlesList } from '../renders';
@@ -20,6 +21,7 @@ export function topicsControl() {
 }
 
 function onTopicClick(e) {
+  observer.unobserve(refs.guardEl); //it is hier only becouse of Fake backend(2 fetches)
   const targetTag = e.target.textContent;
   refs.contentList.innerHTML = '';
   console.log('in topic');

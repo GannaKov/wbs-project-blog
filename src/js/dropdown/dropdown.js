@@ -1,5 +1,6 @@
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import { refs } from '../reference/refs';
+import { observer } from '../customFunction';
 import { renderArticlesList } from '../renders';
 // import { articles } from '../fakeData';
 import { fetchArticlesWithoutScroll } from '../customFunction';
@@ -50,6 +51,7 @@ export function dpdControl() {
   });
 }
 function setOutput(event, data) {
+  observer.unobserve(refs.guardEl); //it is hier only becouse of Fake backend(2 fetches)
   const selectedOptionValue = data.item.value;
   console.log('in dpd befor fetch');
   fetchArticlesWithoutScroll()
