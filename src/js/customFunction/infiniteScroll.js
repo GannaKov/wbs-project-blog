@@ -16,7 +16,7 @@ function onLoad(entries) {
 
       if (refs.totalPosts > 0 && refs.page > refs.totalPage) {
         // alert('You have reached the end of the list of articles.');
-        alertMarkup = `<p class="alertText">You have reached the end of the list of articles.</p>`;
+        const alertMarkup = `<p class="alertText">You have reached the end of the list of articles.</p>`;
         refs.contentList.insertAdjacentHTML('beforeend', alertMarkup);
         observer.unobserve(refs.guardEl);
         return;
