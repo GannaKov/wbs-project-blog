@@ -5,5 +5,7 @@ export function readMoreLinkOperation() {
 }
 function onClickReadMoreLink(e) {
   e.preventDefault();
-  window.location.href = `./article-page.html?post=${e.target.dataset.post}`;
+  if (e.target.className === 'content-list__link') {
+    window.location.href = `./article-page.html?post=${e.target.dataset.post}`;
+  }
 }
