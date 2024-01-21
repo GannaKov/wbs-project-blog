@@ -4,7 +4,7 @@ export const articles = [
     id: '1',
     title: 'How to buy a cheap air ticket',
     date: '15 April 2022',
-    url: 'https://drive.google.com/uc?export=download&id=1RBsMN-HQ78FuOYyZUgJ5efDkiX0ewr48',
+    url: 'https://github.com/GannaKov/wbs-project-blog/blob/main/src/images/backend-img/IMG_4280.JPG?raw=true',
     article:
       'Veritatis hic eaque vero beatae ducimus pariatur delectus dolores accusantium praesentium, saepe accusamus voluptatem sed iusto itaque sequi repellendus dolor.<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni amet veritatis hic eaque vero beatae ducimus pariatur delectus dolores accusantium praesentium, saepe accusamus voluptatem sed iusto itaque sequi repellendus dolor.Aghl saepe accusamus voluptatem sed iusto itaque sequi repellendus dolor. Gaale saepeac cusamusvoluptatem.',
     likes: 3,
@@ -142,3 +142,12 @@ export const article_1 = {
 // /posts
 // /posts/total
 // /posts?currentPage=1&limit=2
+//Dahab
+// https://github.com/GannaKov/wbs-project-blog/blob/main/src/images/backend-img/IMG_8027.jpg?raw=true
+//Airplan https://github.com/GannaKov/wbs-project-blog/blob/main/src/images/backend-img/IMG_4280.JPG?raw=true
+// Spain
+// https://github.com/GannaKov/wbs-project-blog/blob/main/src/images/backend-img/IMG_9716.jpg?raw=true
+// Alpen
+// https://github.com/GannaKov/wbs-project-blog/blob/main/src/images/backend-img/IMG_5297.jpg?raw=true
+// Ryanair
+// https://github.com/GannaKov/wbs-project-blog/blob/main/src/images/backend-img/2e3.png?raw=true
